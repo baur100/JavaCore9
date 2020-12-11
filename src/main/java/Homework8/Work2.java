@@ -14,7 +14,7 @@ public class Work2{
         int[] arr= {3,9,1,8,4,8,5};
         Arrays.sort(arr);
         System.out.printf("Modified arr[]: %s", Arrays.toString(arr));
-        
+
     }
 
     public static int sumOfSix (int a, int b, int c, int d, int e, int f ){
