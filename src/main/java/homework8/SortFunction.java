@@ -8,6 +8,15 @@ public class SortFunction {
         System.out.println( "Print array");
         sort(array);
     }
+    public static int detMin (int[]arr){
+        int min = arr[0];
+        for (int m=1; m<arr.length; m++){
+            if(m<min){
+                min =arr[m];
+            }
+        }
+        return min;
+    }
 
     public static void sort(int[] arr) {
         int x;
