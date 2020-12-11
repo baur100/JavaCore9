@@ -1,6 +1,6 @@
 package lesson8;
 
-public class App {
+public class  App {
     public static void main(String[] args) {
         Person mary = new Person();
         mary.name = "Mary";
@@ -31,6 +31,8 @@ public class App {
         Vehicle myFriendsCar = new Vehicle();
         myFriendsCar.color = "Yellow";
         myFriendsCar.brand = "Honda";
+
+
 
     }
 
