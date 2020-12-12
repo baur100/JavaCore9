@@ -21,6 +21,5 @@ public class App2 {
         Car xx = new Car();
         xx.brand = "Lincoln";
         xx.stopCar();
-
     }
 }
