@@ -13,9 +13,9 @@ public class AppHome{
         dadHouse.streetNumber = 121;
         dadHouse.aptNumber = 1;
 
-        printHome(streetName);
-        printHome(streetNumber);
-        printHome(aptNumber);
+//        printHome(streetName);
+//        printHome(streetNumber);
+//        printHome(aptNumber);
     }
 
             public static void printHome(Home home){
