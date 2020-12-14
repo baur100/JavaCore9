@@ -46,9 +46,7 @@ public class Hw9a {
     static {
         Size tshirt = Size.SMALL;
         System.out.println("size is:" + tshirt);
-
     }
-
 
     static {
     Ingredients[] xxxxy = {Ingredients.CARROT,Ingredients.PEPPER};
