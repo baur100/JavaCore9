@@ -35,5 +35,27 @@ public class Hw9a {
 
 
     }
+    static {
+        Developer yael = new Developer ("Yael", "Zisman", 1990, 10,"USA");
+        System.out.println(yael.getLastName());
+        Qa mark  = new Qa ("Mark", "Smith",1988,"UK", "Train raiders");
+        System.out.println(mark.getBirthYear());
+        Delivery maya = new Delivery ("Maya", "Brown", 1995,"female", 12345);
+        System.out.println(maya.getTruckNumber() +", " + maya.getGender());
+    }
+    static {
+        Size tshirt = Size.SMALL;
+        System.out.println("size is:" + tshirt);
+
+    }
+
+
+    static {
+    Ingredients[] xxxxy = {Ingredients.CARROT,Ingredients.PEPPER};
+
+        Salad my = new Salad (xxxxy, "GUAQ");
+
+    }
+
 }
 
