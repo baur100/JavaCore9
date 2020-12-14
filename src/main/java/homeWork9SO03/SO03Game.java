@@ -47,4 +47,13 @@ public class SO03Game {
         return year;
     }
 
+    public void printInfoGame(){
+        System.out.println("SO03Game: " +
+                "\nGameTitle = " + gameTitle +
+                "\nGenre = " + genre +
+                "\nDeveloper = " + developer +
+                "\nPublisher = " + publisher +
+                "\nYear = " + year);
+    }
+
 }

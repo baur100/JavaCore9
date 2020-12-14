@@ -38,4 +38,12 @@ public class SO03Music {
     public int getYear(){
         return year;
     }
+
+    public void printInfoMusic(){
+        System.out.println("SO03Music: " +
+                "\nArtistName = " + artistName +
+                "\nSongName = " + songName +
+                "\nAlbumeName = " + albumName +
+                "\nYear = " + year);
+    }
 }

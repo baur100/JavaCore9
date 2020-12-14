@@ -43,4 +43,12 @@ public class SO03Movie {
     public int getYear() {
         return year;
     }
+
+    public void printInfoMovie(){
+        System.out.println("SO03Movie: " +
+                "\nMovieTitle = " + movieTitle +
+                "\nDirectorName = " + directorName +
+                "\nDirectorLastName = " + directorLastName +
+                "\nYear = " + year);
+    }
 }

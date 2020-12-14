@@ -43,4 +43,12 @@ public class SO03Car {
     public int getYear() {
         return year;
     }
+
+    public void printInfoCar(){
+        System.out.println("SO03Car: " +
+                "\nBrand = " + brand +
+                "\nModel = " + model +
+                "\nColor = " + color +
+                "\nYear = " + year);
+    }
 }
