@@ -6,7 +6,7 @@ public class SortFunction {
 
     public static void main(String[] args) {
 
-        int array[] = new int[]{3, 9, 1, 8, 4, 8, 5};
+        int[] array = new int[]{3, 9, 1, 8, 4, 8, 5};
         sort(array);
         System.out.println("print array");
 
