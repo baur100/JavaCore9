@@ -19,16 +19,20 @@ public class Person {
     public Person(){}
 
     public void setName(String name){
+
         this.name = name;
     }
     public String getName(){
+
         return name;
     }
 
     public void setLastName(String ln){
+
         lastName = ln;
     }
     public String getLastName(){
+
         return lastName;
     }
 

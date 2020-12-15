@@ -11,5 +11,18 @@ public class Person {
     public String getName(){
         return name;
     }
+    public void setLastName(String ln){
+        lastName = ln;
+    }
+public String getLastName(){
+        return lastName;
+}
+public void setYear(int y){
+
+        year=y;
+}
+public int getYear(){
+        return year;
+}
 
 }

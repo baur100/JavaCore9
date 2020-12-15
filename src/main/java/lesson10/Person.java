@@ -12,26 +12,32 @@ public class Person {
     }
 
     public String getName() {
+
         return name;
     }
 
     public void setName(String name) {
+
         this.name = name;
     }
 
     public String getLastName() {
+
         return familyName;
     }
 
     public void setLastName(String lastName) {
+
         this.familyName = lastName;
     }
 
     public int getYearOfBirth() {
+
         return yearOfBirth;
     }
 
     public void setYearOfBirth(int yearOfBirth) {
+
         this.yearOfBirth = yearOfBirth;
     }
 }

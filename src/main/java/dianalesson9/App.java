@@ -6,6 +6,8 @@ public class App {
         elen.setName("Elen");
         String xx = elen.getName();
         System.out.println(xx);
+
+
     }
 }
 
