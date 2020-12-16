@@ -27,9 +27,6 @@ public class SO03HW12Keyboard {
 
 
     public String toString() {
-        return "SO03HW12Keyboard{" +
-                "brand='" + brand + '\'' +
-                ", model='" + model + '\'' +
-                '}';
+        return brand + " " +model;
     }
 }

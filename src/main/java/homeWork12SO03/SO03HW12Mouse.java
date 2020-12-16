@@ -27,9 +27,6 @@ public class SO03HW12Mouse {
 
 
     public String toString() {
-        return "SO03HW12Mouse{" +
-                "brand='" + brand + '\'' +
-                ", model='" + model + '\'' +
-                '}';
+        return brand + " " + model;
     }
 }

@@ -47,11 +47,6 @@ public class SO03HW23Motherboard {
 
 
     public String toString() {
-        return "SO03HW23Motherboard{" +
-                "brand='" + brand + '\'' +
-                ", model='" + model + '\'' +
-                ", processor=" + processor +
-                ", memory=" + memory +
-                '}';
+        return brand + " " + model+ " " + "\nProcessor - " + processor + " " + "\nMemory - " +memory;
     }
 }

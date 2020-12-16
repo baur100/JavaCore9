@@ -37,10 +37,6 @@ public class SO03HW12Processor {
 
 
     public String toString() {
-        return "SO03HW12Processor{" +
-                "brand='" + brand + '\'' +
-                ", model='" + model + '\'' +
-                ", core=" + core +
-                '}';
+        return brand + " " + model + " " + core;
     }
 }

@@ -47,11 +47,9 @@ public class SO03HW12Computer {
 
 
     public String toString() {
-        return "SO03HW12Computer{" +
-                "keyboard=" + keyboard +
-                ", mouse=" + mouse +
-                ", monitor=" + monitor +
-                ", systemBlock=" + systemBlock +
-                '}';
+        return "Computer: " + "\nKeyboard - " + keyboard +
+                "\nMouse - " + mouse +
+                "\nMonitor - " + monitor +
+                "\nSystemBlock: " + systemBlock;
     }
 }

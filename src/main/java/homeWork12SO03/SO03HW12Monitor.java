@@ -37,10 +37,6 @@ public class SO03HW12Monitor {
 
 
     public String toString() {
-        return "SO03HW12Monitor{" +
-                "brand='" + brand + '\'' +
-                ", model='" + model + '\'' +
-                ", diagonal=" + diagonal +
-                '}';
+        return brand + " "+ model + " " + diagonal;
     }
 }

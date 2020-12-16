@@ -17,8 +17,6 @@ public class SO03HW12Memory {
 
 
     public String toString() {
-        return "SO03HW12Memory{" +
-                "brand='" + brand + '\'' +
-                '}';
+        return brand;
     }
 }

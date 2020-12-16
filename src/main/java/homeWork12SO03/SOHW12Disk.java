@@ -17,8 +17,7 @@ public class SOHW12Disk {
 
 
     public String toString() {
-        return "SOHW12Disk{" +
-                "brand='" + brand + '\'' +
-                '}';
+        return "\nDisk - " + brand;
     }
+
 }

@@ -27,9 +27,6 @@ public class SO03HW12SystemBlock {
 
 
     public String toString() {
-        return "SO03HW12SystemBlock{" +
-                "motherboard=" + motherboard +
-                ", disk=" + disk +
-                '}';
+        return "\nMotherboard - " + motherboard + " " + disk;
     }
 }

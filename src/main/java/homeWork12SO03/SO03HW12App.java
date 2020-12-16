@@ -10,12 +10,14 @@ public class SO03HW12App {
         SO03HW23Motherboard motherboard = new SO03HW23Motherboard("Gigabyte","H110M-S2H",new SO03HW12Processor("Intel","Core i7",4),new SO03HW12Memory("Corsair"));
         SO03HW12Keyboard keyboard = new SO03HW12Keyboard("Logitech","G915");
         SO03HW12Mouse mouse = new SO03HW12Mouse("Logitech","G403 Hero");
-
-
+//
+//
         SO03HW12SystemBlock systemBlock = new SO03HW12SystemBlock(motherboard,disk);
         SO03HW12Computer dell = new SO03HW12Computer(keyboard,mouse,monitor,systemBlock);
-
+//
+//        System.out.println(dell);
         System.out.println(dell);
+
 
     }
 }
