@@ -29,8 +29,7 @@ public class Processor {
     @Override
     public String toString() {
         return "Processor{" +
-                "name='" + name + '\'' +
-                ", frequency=" + frequency +
-                '}';
+                "\nname='" + name + '\'' +
+                "\nfrequency=" + frequency;
     }
 }

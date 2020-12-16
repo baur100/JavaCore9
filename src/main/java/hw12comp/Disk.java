@@ -29,8 +29,7 @@ public class Disk {
     @Override
     public String toString() {
         return "Disk{" +
-                "speed=" + speed +
-                ", size='" + size + '\'' +
-                '}';
+                "\nspeed=" + speed +
+                "\nsize=" + size + '\''+ "}";
     }
 }

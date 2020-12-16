@@ -29,8 +29,7 @@ public class Keyboard {
     @Override
     public String toString() {
         return "Keyboard{" +
-                "brand='" + brand + '\'' +
-                ", color='" + color + '\'' +
-                '}';
+                "\nbrand='" + brand + '\'' +
+                "\ncolor='" + color + '\'';
     }
 }

@@ -28,8 +28,7 @@ public class Mouse {
     @Override
     public String toString() {
         return "Mouse{" +
-                "brand='" + brand + '\'' +
-                ", model='" + model + '\'' +
-                '}';
+                "\nbrand='" + brand + '\'' +
+                "\nmodel='" + model + '\'';
     }
 }

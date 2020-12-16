@@ -48,10 +48,9 @@ public class Motherboard {
     @Override
     public String toString() {
         return "Motherboard{" +
-                "brand='" + brand + '\'' +
-                ", model='" + model + '\'' +
-                ", processor=" + processor +
-                ", memory=" + memory +
-                '}';
+                "\nbrand='" + brand + '\'' +
+                "\nmodel='" + model + '\'' +
+                "\nprocessor=" + processor +
+                "\nmemory=" + memory;
     }
 }

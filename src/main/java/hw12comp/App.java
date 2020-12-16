@@ -25,5 +25,6 @@ public class App {
     String motherboardBrand = dimaSystemBlock.getMotherboard().getBrand();
         System.out.println(motherboardBrand);
 
+        System.out.println(dimaComputer.toString());
     }
 }

@@ -29,8 +29,7 @@ public class Monitor {
     @Override
     public String toString() {
         return "Monitor{" +
-                "diagonal=" + diagonal +
-                ", brand='" + brand + '\'' +
-                '}';
+                "\ndiagonal=" + diagonal +
+                "\nbrand='" + brand + '\'';
     }
 }

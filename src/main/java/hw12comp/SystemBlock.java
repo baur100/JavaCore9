@@ -28,8 +28,7 @@ public class SystemBlock {
     @Override
     public String toString() {
         return "SystemBlock{" +
-                "motherboard=" + motherboard +
-                ", disk=" + disk +
-                '}';
+                "\nmotherboard=" + motherboard +
+                "\ndisk=" + disk;
     }
 }

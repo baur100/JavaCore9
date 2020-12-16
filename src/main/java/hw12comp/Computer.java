@@ -47,11 +47,10 @@ public class Computer {
 
     @Override
     public String toString() {
-        return "Computer{" +
-                "keyboard=" + keyboard +
-                ", mouse=" + mouse +
-                ", monitor=" + monitor +
-                ", systemBlock=" + systemBlock +
-                '}';
+        return "Computer: " +
+                "\nkeyboard=" + keyboard +
+                "\nmouse=" + mouse +
+                "\nmonitor=" + monitor +
+                "\nsystemBlock=" + systemBlock;
     }
 }

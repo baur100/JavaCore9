@@ -29,8 +29,7 @@ public class Memory {
     @Override
     public String toString() {
         return "Memory{" +
-                "capacity=" + capacity +
-                ", type='" + type + '\'' +
-                '}';
+                "\ncapacity=" + capacity +
+                "\ntype='" + type + '\'';
     }
 }
