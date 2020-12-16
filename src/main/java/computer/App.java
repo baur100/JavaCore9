@@ -15,7 +15,8 @@ public class App {
 
 
 
-        System.out.println(dell);
+        dell.printInfo();
+
 
     }
 }

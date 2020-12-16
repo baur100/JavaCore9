@@ -24,5 +24,7 @@ public class SystemBlock {
     public void setDisk(Disk disk) {
         this.disk = disk;
     }
+
+
 }
 

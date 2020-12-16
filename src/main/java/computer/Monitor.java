@@ -24,4 +24,7 @@ public class Monitor {
    public void setResolution(String resolution) {
       this.resolution = resolution;
    }
-}
+
+
+   }
+

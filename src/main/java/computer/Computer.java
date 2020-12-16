@@ -46,5 +46,16 @@ public class Computer {
     public void setSystemBlock(SystemBlock systemBlock) {
         this.systemBlock = systemBlock;
     }
+
+
+    public void printInfo() {
+        System.out.println( "Computer{" +
+                "keyboard=" + keyboard +
+                ", mouse=" + mouse +
+                ", monitor=" + monitor +
+                ", systemBlock=" + systemBlock +
+                '}');
+    }
 }
+
 
