@@ -3,7 +3,7 @@ package HomeWork10_11;
 public class HouseCats extends HouseAnimals {
     private String catBread;
 
-    public HouseCats(String bread, String habitat, String diet, String nickname, int age, String catBread) {
+    public HouseCats(String bread, String habitat, String diet, String nickname, int age, String catBread, TypeOfAnimal eatmeat) {
         super(bread, habitat, diet, nickname, age);
         this.catBread = catBread;
     }

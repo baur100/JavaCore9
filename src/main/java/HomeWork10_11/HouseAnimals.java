@@ -10,10 +10,15 @@ public class HouseAnimals extends  Animals {
         this.age = age;
     }
 
+
     public HouseAnimals(String bread, String habitat, String nickname, int age) {
         super(bread, habitat);
         this.nickname = nickname;
         this.age = age;
+    }
+
+    public HouseAnimals(String pudel, String home, String meat, String sharik, Toys[] shariktoys, Toys bone) {
+        super();
     }
 
     public String getNickname() {

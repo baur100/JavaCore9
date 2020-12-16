@@ -21,6 +21,10 @@ public class Animals {
         this.habitat = habitat;
     }
 
+    public Animals() {
+
+    }
+
     public String getBread() {
         return bread;
     }
