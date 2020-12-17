@@ -2,25 +2,16 @@ package homework9IP;
 
 public class AppIP {
     public static void main(String[] args) {
-        City newyork = new City();
-        newyork.name = "New York";
-        newyork.state = "NY";
-        newyork.zipCode = "11001";
 
-        City sf = new City();
-        sf.name = "San Francisco";
-        sf.state = "CA";
-        sf.zipCode = "22002";
+        City newYork = new City("New York", "New York", "10306");
+        newYork.printCityInfo();
+        newYork.setZipCode("10307");
+        newYork.printCityInfo();
 
-        printCity(sf);
-
-    }
-
-    public static void printCity(City city){
-        System.out.println("Name = "+city.name+
-                "\nState = "+city.state+
-                "\nZipCode ="+city.zipCode);
+        City sf =new City();
+        sf.setName("SomeName");
+        sf.printCityInfo();
+        System.out.println(newYork.getName());
 
     }
-
 }
