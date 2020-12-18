@@ -1,6 +1,7 @@
 package homeWork13SO03;
 
 public class SO03Calculate implements SO03HW13Distance{
+
     protected double speed;
     protected double time;
 
