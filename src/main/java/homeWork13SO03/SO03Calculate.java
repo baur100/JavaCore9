@@ -11,11 +11,11 @@ public class SO03Calculate implements SO03HW13Distance{
 
     @Override
     public void calculate() {
-        System.out.println("If you go with " + this.speed + " MpH " + "for " + this.time + " hours." + " Then you will cover distance = " +getDistance());
+        System.out.println("If you go with " + speed + " MpH " + "for " + time + " hours." + " Then you will cover distance = " +getDistance());
     }
 
     @Override
     public double getDistance() {
-        return this.speed*this.time;
+        return speed*time;
     }
 }
