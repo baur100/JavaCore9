@@ -12,13 +12,8 @@ public class App11 {
         nokia.color = " Grey";
         nokia.price = 10;
 
-        printTelephone(iphone);
-        printTelephone(nokia);
+        iphone.printTelephone();
+        nokia.printTelephone();
+    }
 
-    }
-    public static void printTelephone(TelephoneHw iphone){
-        System.out.println("Model = "+ TelephoneHw.model+
-                "\nColor = "+ TelephoneHw.color+
-                "\nPrice = "+ TelephoneHw.price);
-    }
 }

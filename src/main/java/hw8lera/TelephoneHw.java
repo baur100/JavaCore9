@@ -1,9 +1,16 @@
 package hw8lera;
 
 public class TelephoneHw {
-    public static int price;
-    public static String model;
-    public static String color;
+    public  int price;
+    public  String model;
+    public  String color;
+
+    public void printTelephone(){
+        System.out.println("Model = "+model+
+                "\nColor = "+color+
+                "\nPrice = "+ price);
+    }
 }
+
 
 
