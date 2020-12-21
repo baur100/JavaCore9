@@ -25,6 +25,12 @@ public class Monitor {
       this.resolution = resolution;
    }
 
-
+   @java.lang.Override
+   public java.lang.String toString() {
+      return "Monitor{" +
+              "inches=" + inches +
+              ", resolution='" + resolution + '\'' +
+              '}';
    }
+}
 

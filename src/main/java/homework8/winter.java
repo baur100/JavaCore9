@@ -1,6 +1,6 @@
 package homework8;
 
-public class Winter {
+class Winter {
     public String weather;
     public String clothes;
     public Double temp;

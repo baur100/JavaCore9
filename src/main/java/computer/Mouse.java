@@ -16,4 +16,12 @@ public class Mouse {
     public void setBrand(String brand) {
         this.brand = brand;
     }
+
+    @java.lang.Override
+    public java.lang.String toString() {
+        return "Mouse{" +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                '}';
+    }
 }

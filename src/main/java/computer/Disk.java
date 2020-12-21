@@ -24,4 +24,12 @@ public class Disk {
     public void setType(String type) {
         this.type = type;
     }
+
+    @java.lang.Override
+    public java.lang.String toString() {
+        return "Disk{" +
+                "size='" + size + '\'' +
+                ", type='" + type + '\'' +
+                '}';
+    }
 }

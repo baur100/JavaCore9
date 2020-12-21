@@ -24,5 +24,13 @@ public class Processor {
     public void setType(String type) {
         this.type = type;
     }
+
+    @java.lang.Override
+    public java.lang.String toString() {
+        return "Processor{" +
+                "brand='" + brand + '\'' +
+                ", type='" + type + '\'' +
+                '}';
+    }
 }
 

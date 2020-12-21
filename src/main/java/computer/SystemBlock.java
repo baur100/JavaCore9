@@ -25,6 +25,12 @@ public class SystemBlock {
         this.disk = disk;
     }
 
-
+    @java.lang.Override
+    public java.lang.String toString() {
+        return "SystemBlock{" +
+                "motherboard=" + motherboard +
+                ", disk=" + disk +
+                '}';
+    }
 }
 

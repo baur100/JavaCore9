@@ -1,12 +1,14 @@
 package computer;
 
+import java.util.Arrays;
+
 public class Keyboard {
     private String numberPad;
-    private String lit;
+    private Colors colors;
 
-    public Keyboard(String numberPad, String lit) {
+    public Keyboard(String numberPad, Colors colors) {
         this.numberPad = numberPad;
-        this.lit = lit;
+        this.colors = colors;
     }
 
     public String getNumberPad() {
@@ -17,12 +19,22 @@ public class Keyboard {
         this.numberPad = numberPad;
     }
 
-    public String getLit() {
-        return lit;
+    public Colors getColors() {
+        return colors;
     }
 
-    public void setLit(String lit) {
-        this.lit = lit;
+    public void setColors(Colors colors) {
+        this.colors = colors;
+    }
+
+    @Override
+    public String toString() {
+        return "Keyboard{" +
+                "numberPad='" + numberPad + '\'' +
+                ", colors=" + colors +
+                '}';
     }
 }
+
+
 

@@ -44,5 +44,15 @@ public class Motherboard {
     public void setMemory(Memory memory) {
         this.memory = memory;
     }
+
+    @java.lang.Override
+    public java.lang.String toString() {
+        return "Motherboard{" +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                ", processor=" + processor +
+                ", memory=" + memory +
+                '}';
+    }
 }
 

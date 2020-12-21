@@ -1,16 +1,20 @@
 package computer;
-
 public class Computer {
+
+
+
     private Keyboard keyboard;
     private Mouse mouse;
     private Monitor monitor;
     private SystemBlock systemBlock;
+    private Array array;
 
-    public Computer(Keyboard keyboard, Mouse mouse, Monitor monitor, SystemBlock systemBlock) {
+    public Computer(Keyboard keyboard, Mouse mouse, Monitor monitor, SystemBlock systemBlock,Array array) {
         this.keyboard = keyboard;
         this.mouse = mouse;
         this.monitor = monitor;
         this.systemBlock = systemBlock;
+        this.array = array;
     }
 
 
@@ -49,13 +53,12 @@ public class Computer {
 
 
     public void printInfo() {
-        System.out.println( "Computer{" +
+        System.out.println("Computer{" +
                 "keyboard=" + keyboard +
                 ", mouse=" + mouse +
                 ", monitor=" + monitor +
                 ", systemBlock=" + systemBlock +
                 '}');
+
     }
-}
-
-
+    }
