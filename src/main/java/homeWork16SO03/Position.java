@@ -1,0 +1,11 @@
+package homeWork16SO03;
+
+public enum Position {
+    DERMATOLOGIST,
+    CARDIOLOGIST,
+    ALLERGIST,
+    OPHTHALMOLOGIST,
+    ENDOCRINOLOGIST,
+    NEPHROLOGIST,
+    ONCOLOGIST
+}
