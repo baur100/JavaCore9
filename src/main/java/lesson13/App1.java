@@ -2,7 +2,6 @@ package lesson13;
 
 public class App1 {
     public static void main(String[] args) {
-//        Person person = new Person();
         Circle cr1 = new Circle(2.2);
         Shape shape1 = new Circle(2.3);
         Rectangle rec1 = new Rectangle(2,3.1);
