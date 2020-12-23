@@ -1,8 +1,5 @@
 package homeWork16SO03;
 
-import lesson14SO03.InsuranceCompanies;
-
-import javax.management.MBeanAttributeInfo;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -32,6 +29,8 @@ public class App {
         System.out.println(princetonPlainsboro);
         System.out.println(doctors);
         System.out.println(rooms);
+
+        System.out.println(acceptedInsurances);
 
 
     }
