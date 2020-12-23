@@ -33,4 +33,5 @@ public class Hospital {
             System.out.println(entry.getKey() + " => " + entry.getValue());
         });
     }
+
 }
