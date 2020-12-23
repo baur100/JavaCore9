@@ -6,6 +6,6 @@ public class DriveBoat implements UsaDriverLicense  {
 
     @Override
     public void usaDriverLicence() {
-        System.out.println("Your age is " + age +" and  you " +swim);
+        System.out.println("Your age is  " + age +" and  you " +swim);
     }
 }
