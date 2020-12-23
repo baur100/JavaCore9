@@ -8,5 +8,4 @@ public enum Position {
     ENDOCRINOLOGIST,
     NEPHROLOGIST,
     ONCOLOGIST
-
 }

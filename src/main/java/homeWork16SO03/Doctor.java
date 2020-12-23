@@ -39,5 +39,4 @@ public class Doctor {
     public String toString() {
         return "Doctor " + name + " " + lastName + " " + position;
     }
-
 }

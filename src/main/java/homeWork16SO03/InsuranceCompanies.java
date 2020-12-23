@@ -6,5 +6,4 @@ public enum InsuranceCompanies {
     GUARDIAN,
     BLUECROSS,
     OXFORD
-
 }
