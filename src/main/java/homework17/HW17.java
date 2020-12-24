@@ -2,14 +2,14 @@ package homework17;
 
 public class HW17 {
     public static void main(String[] args) {
-        Lion myLion = new Lion();
-        myLion.eat();
-        myLion.grow();
-        myLion.breathe();
-        myLion.fur();
-        myLion.reproduction();
-        myLion.breed();
-        myLion.die();
+//        Lion myLion = new Lion();
+//        myLion.eat();
+//        myLion.grow();
+//        myLion.breathe();
+//        myLion.fur();
+//        myLion.reproduction();
+//        myLion.breed();
+//        myLion.die();
 
         Wolf myWolf= new Wolf();
         myWolf.breathe();
