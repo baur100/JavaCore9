@@ -1,7 +1,6 @@
-package lesson9IP;
+package PracticeIP;
 
 public class AppIP {
-
 
 
 }
