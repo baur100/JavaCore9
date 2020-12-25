@@ -1,4 +1,4 @@
-package lesson8;
+package floreslesson8;
 
 public class Vehicle {
     public String brand;

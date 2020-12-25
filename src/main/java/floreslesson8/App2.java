@@ -1,8 +1,8 @@
-package lesson8;
+package floreslesson8;
 
 public class App2 {
     public static void main(String[] args) {
-        Car myCar = new Car();
+        Car myCar =new Car();
         myCar.model = "Tundra";
         myCar.brand = "Toyota";
         myCar.color = "Silver";
