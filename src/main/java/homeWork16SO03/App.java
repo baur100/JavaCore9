@@ -7,6 +7,11 @@ import java.util.List;
 public class App {
     public static void main(String[] args) {
 
+        HashMap<Integer, String> rooms2 = new HashMap<>();
+        rooms2.put(1, "Allergist");
+        rooms2.put(4, "Endocrinologist");
+        rooms2.put(25, "NEPHROLOGIST");
+
 
        Doctor house = new Doctor("Gregory","House",Position.NEPHROLOGIST);
        Doctor wilson = new Doctor("James","Wilson",Position.ONCOLOGIST);
@@ -34,6 +39,7 @@ public class App {
 
         System.out.println(acceptedInsurances);
         princetonPlainsboro.printHospitalInfo();
+        System.out.println(rooms2);
 
     }
 
