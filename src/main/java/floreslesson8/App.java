@@ -39,6 +39,8 @@ public class App {
         printCar(myCar);
         printCar(friendCar);
 
+
+
     }
     public static void printPerson(Person person){
         System.out.println("\nName: "+person.name+
@@ -49,5 +51,7 @@ public class App {
     public static void printCar(Vehicle vehicle){
         System.out.println("Car: "+vehicle.brand+" "+vehicle.model+" "
                 +vehicle.color+" "+vehicle.year);
+
+
     }
 }

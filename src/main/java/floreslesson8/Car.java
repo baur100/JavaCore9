@@ -7,7 +7,7 @@ public class Car {
     public int year;
 
     public void startEngine(){
-        System.out.println("Egine of "+brand+" "+model+" is started");
+        System.out.println("Engine of "+brand+" "+model+" is started");
     }
     public void stopCar(){
         System.out.println(brand+" "+model+" is stopped");
