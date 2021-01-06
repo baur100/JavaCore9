@@ -21,7 +21,7 @@ public class SimpleTest1 {
         WebElement loginButton = driver.findElement(By.cssSelector("[id='submit']"));
 
         emailField.sendKeys("dshpakin@gmail.com");
-        passwordField.sendKeys("wrongPassword ");
+        passwordField.sendKeys("wrongPassword");
         loginButton.click();
 
         Thread.sleep(2000);
