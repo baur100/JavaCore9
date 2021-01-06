@@ -14,7 +14,7 @@ public class App {
     driver.get("https://google.com");
 
     WebElement searchField = driver.findElement(By.cssSelector("[type='text']"));
-    searchField.sendKeys("Java");
+    searchField.sendKeys("Дима");
     searchField.sendKeys(Keys.ENTER);
     Thread.sleep(5000);
     driver.quit();
