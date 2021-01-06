@@ -15,24 +15,25 @@ public class SimpleTest1 {
         System.setProperty("webdriver.chrome.driver", "chromedriver");
         WebDriver driver = new ChromeDriver();
 
-        driver.get ("https://accounts.myherbalife.com/?appId=1&locale=ru-RU&redirect=https://www.myherbalife.com/");
-        WebElement emailField = driver.findElement(By.cssSelector("[id='Username']"));
+        driver.get ("https://koelapp.testpro.io/");
+        Thread.sleep(1000);
+        WebElement emailField = driver.findElement(By.cssSelector("[type='email']"));
         WebElement passwordField = driver.findElement(By.xpath("//*[@type='password']"));
-        WebElement loginButton = driver.findElement(By.cssSelector("[id='submit']"));
+        WebElement loginButton = driver.findElement(By.cssSelector("button"));
 
-        emailField.sendKeys("dshpakin@gmail.com");
-        passwordField.sendKeys("wrongPassword");
+        emailField.sendKeys("koeluser06@testpro.io");
+        passwordField.sendKeys("te$t$tudent");
         loginButton.click();
 
         Thread.sleep(2000);
         boolean logged= false;
 
-        try {
-            driver.findElement(By.xpath("//*[@role='banner']"));
-            logged=true;
+        try{
+           driver.findElement(By.className("home"));
+           logged=true;
         } catch (NoSuchElementException ignored){}
-        Assert.assertTrue(logged);
 
+       Assert.assertTrue(logged);
         Thread.sleep(10000);
 
         driver.close();
