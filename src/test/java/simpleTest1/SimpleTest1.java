@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 public class SimpleTest1 {
     @Test
-    public void loginTest_correctCredentials_loggedToApp () throws InterruptedException {
+    public void loginTest_wrongCredentials_errorRedFrame () throws InterruptedException {
 
         System.setProperty("webdriver.chrome.driver", "chromedriver");
         WebDriver driver = new ChromeDriver();
@@ -22,19 +22,19 @@ public class SimpleTest1 {
         WebElement loginButton = driver.findElement(By.cssSelector("button"));
 
         emailField.sendKeys("koeluser06@testpro.io");
-        passwordField.sendKeys("te$t$tudent");
+        passwordField.sendKeys("te$t$tudent1");
         loginButton.click();
 
         Thread.sleep(2000);
         boolean logged= false;
 
         try{
-           driver.findElement(By.className("home"));
+           driver.findElement(By.className("error"));
            logged=true;
         } catch (NoSuchElementException ignored){}
 
        Assert.assertTrue(logged);
-        Thread.sleep(10000);
+        Thread.sleep(3000);
 
         driver.close();
 
