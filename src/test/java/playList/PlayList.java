@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 
 public class PlayList {
 
-
     @Test
     public void login_createPlayList_verification () throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "chromedriver");
@@ -35,11 +34,11 @@ public class PlayList {
         try { driver.findElement(By.xpath("//*[@class='active']"));
             created=true;}
         catch (NoSuchElementException ignored){}
-
         Assert.assertTrue(created);
         Thread.sleep(2000);
-
         driver.close();
+
+
 
 
 
