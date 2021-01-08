@@ -29,7 +29,7 @@ public class PlayList {
         Thread.sleep(2000);
         addPlaylist.click();
         WebElement namePlaylist =driver.findElement(By.cssSelector("[placeholder='↵ to save']"));
-        namePlaylist.sendKeys("Test playlist");
+        namePlaylist.sendKeys("Dmitry's playlist");
         namePlaylist.sendKeys(Keys.RETURN);
 
 
