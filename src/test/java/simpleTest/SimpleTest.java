@@ -1,26 +1,36 @@
 package simpleTest;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
 import java.util.List;
 
 public class SimpleTest {
     WebDriver driver;
+    WebDriverWait wait;
+    FluentWait<WebDriver> fluentWait;
     @BeforeMethod
-    public void startUp() throws InterruptedException {
+    public void startUp(){
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         driver = new ChromeDriver();
+//        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
+        wait = new WebDriverWait(driver,10,100);
+        fluentWait = new FluentWait<WebDriver>(driver)
+                .ignoring(NoSuchElementException.class)
+                .ignoring(StaleElementReferenceException.class)
+                .ignoring(ElementClickInterceptedException.class)
+                .pollingEvery(Duration.ofMillis(100))
+                .withTimeout(Duration.ofSeconds(10));
         driver.get("https://koelapp.testpro.io/");
-        Thread.sleep(1000);
     }
     @AfterMethod
     public void tearDown() throws InterruptedException {
@@ -28,16 +38,16 @@ public class SimpleTest {
         driver.close();
     }
     @Test
-    public void loginTest_correctCredentials_loggedToApp() throws InterruptedException {
+    public void loginTest_correctCredentials_loggedToApp() {
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("[type='email']")));
         WebElement emailField = driver.findElement(By.cssSelector("[type='email']"));
         WebElement passwordField = driver.findElement(By.xpath("//*[@type='password']"));
         WebElement loginButton = driver.findElement(By.cssSelector("button"));
 
         emailField.sendKeys("koeluser06@testpro.io");
-        passwordField.sendKeys("te$t$tudent1"); // "WrongPassword"
+        passwordField.sendKeys("te$t$tudent"); // "WrongPassword"
         loginButton.click();
 
-        Thread.sleep(1500);
 //        boolean logged = false;
 //        try{
 //            driver.findElement(By.className("home"));
@@ -48,12 +58,14 @@ public class SimpleTest {
 //        boolean logged = driver.findElement(By.cssSelector(".home")).isDisplayed();
 //        Assert.assertTrue(logged);
 
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='home active']")));
         List<WebElement> homes = driver.findElements(By.xpath("//*[@class='home active']"));
         Assert.assertEquals(1,homes.size());
     }
 
     @Test
-    public void loginTest_wrongCredentials_errorFrame() throws InterruptedException {
+    public void loginTest_wrongCredentials_errorFrame() {
+        fluentWait.until(x-> x.findElement(By.xpath("//*[@type='email']")).isDisplayed());
         WebElement emailField = driver.findElement(By.cssSelector("[type='email']"));
         WebElement passwordField = driver.findElement(By.xpath("//*[@type='password']"));
         WebElement loginButton = driver.findElement(By.cssSelector("button"));
@@ -62,9 +74,8 @@ public class SimpleTest {
         passwordField.sendKeys("WrongPassword");
         loginButton.click();
 
-        Thread.sleep(1500);
-
-        List<WebElement> homes = driver.findElements(By.cssSelector(".e1rror"));
+        fluentWait.until(x->x.findElement(By.cssSelector(".error")));
+        List<WebElement> homes = driver.findElements(By.cssSelector(".error"));
         Assert.assertEquals(1,homes.size());
     }
 }
