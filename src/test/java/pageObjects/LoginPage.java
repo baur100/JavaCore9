@@ -13,11 +13,11 @@ public class LoginPage {
         wait = new WebDriverWait(driver,10,100);
     }
     private WebElement getEmailField(){
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("[type='email']")));
-        return driver.findElement(By.cssSelector("[type='email']"));
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(LoginPageLocators.cssEmailLocator)));
+        return driver.findElement(By.cssSelector(LoginPageLocators.cssEmailLocator));
     }
     private WebElement getPasswordField(){
-        return driver.findElement(By.cssSelector("[type='password']"));
+        return driver.findElement(LoginPageLocators.byPassword);
     }
     private WebElement getLoginButton(){
         return driver.findElement(By.cssSelector("button"));

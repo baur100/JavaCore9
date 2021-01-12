@@ -2,6 +2,7 @@ package pageObjectTests;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -22,9 +23,11 @@ public class PlaylistTest {
     }
     @Test
     public void playlistTests_createPlaylist_playlistCreated(){
+        String name = "xxxx";
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
         MainPage mainPage = loginPage.login("koeluser06@testpro.io", "te$t$tudent");
-        mainPage.createPlaylist("xxxx");
+        String playlistId = mainPage.createPlaylist(name);
+        Assert.assertTrue(mainPage.checkPlaylistExist(playlistId,name));
     }
 }
