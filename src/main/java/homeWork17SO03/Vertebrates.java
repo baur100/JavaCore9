@@ -1,9 +1,9 @@
 package homeWork17SO03;
 
 public interface Vertebrates {
-    Amphibians;
-    Birds;
-    Fish;
-    Mammals;
-    Reptilies;
+    void Amphibians();
+    void Birds();
+    void Fish();
+    void Mammals();
+    void Reptilies();
 }

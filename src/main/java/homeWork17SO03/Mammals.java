@@ -1,11 +1,11 @@
 package homeWork17SO03;
 
 public interface Mammals {
-    Carnivores;
-    Primates;
-    Seals;
-    Rodents;
-    Whales;
-    Herbivores;
+    void Carnivores();
+    void Primates();
+    void Seals();
+    void Rodents();
+    void Whales();
+    void Herbivores();
 
 }

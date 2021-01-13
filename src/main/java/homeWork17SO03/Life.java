@@ -2,10 +2,10 @@ package homeWork17SO03;
 
 public interface Life {
 
-    Animals;
-    Bacteria;
-    Fungi;
-    Plants;
+    void Animals();
+    void Bacteria();
+    void Fungi();
+    void Plants();
 
 
 }
