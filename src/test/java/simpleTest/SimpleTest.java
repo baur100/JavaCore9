@@ -19,7 +19,7 @@ public class SimpleTest {
     FluentWait<WebDriver> fluentWait;
     @BeforeMethod
     public void startUp(){
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "chromedriver");
         driver = new ChromeDriver();
 //        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 

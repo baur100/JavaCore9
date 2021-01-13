@@ -13,7 +13,7 @@ public class PlaylistTest {
     private WebDriver driver;
     @BeforeMethod
     public void startUp(){
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "chromedriver");
         driver = new ChromeDriver();
     }
     @AfterMethod
@@ -23,7 +23,7 @@ public class PlaylistTest {
     }
     @Test
     public void playlistTests_createPlaylist_playlistCreated(){
-        String name = "xxxx";
+        String name = "AAxxx";
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
         MainPage mainPage = loginPage.login("koeluser06@testpro.io", "te$t$tudent");
