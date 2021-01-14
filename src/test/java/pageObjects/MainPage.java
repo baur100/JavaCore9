@@ -1,29 +1,13 @@
 package pageObjects;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
-
-public class MainPage {
-    private WebDriver driver;
-    private WebDriverWait wait;
-    private FluentWait<WebDriver> fluentWait;
+public class MainPage extends BasePage {
     public MainPage(WebDriver driver) {
-        this.driver = driver;
-        wait = new WebDriverWait(driver,10,100);
-        fluentWait = new FluentWait<WebDriver>(driver)
-                .ignoring(ElementClickInterceptedException.class)
-                .ignoring(NoSuchElementException.class)
-                .withTimeout(Duration.ofSeconds(10))
-                .pollingEvery(Duration.ofMillis(100));
+        super(driver);
     }
-//    private WebElement getPlusButton(){
-//        fluentWait.until(d->d.findElement(By.cssSelector(".fa-plus-circle")));
-//        return driver.findElement(By.cssSelector(".fa-plus-circle"));
-//    }
     private void clickPlusButton(){
         wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".fa-plus-circle")));
         for (int i=0;i<5;i++){
@@ -32,6 +16,9 @@ public class MainPage {
                 break;
             } catch (ElementClickInterceptedException ignored){}
         }
+    }
+    private WebElement getEditPlaylistField(){
+        return driver.findElement(By.xpath("//*[@class='playlist playlist editing']/input"));
     }
     private WebElement getNewPlaylistFiled(){
         return driver.findElement(By.xpath("//*[@class='create']/input"));
@@ -53,5 +40,16 @@ public class MainPage {
     public boolean checkPlaylistExist(String playlistId, String name) {
         WebElement newPlaylist = driver.findElement(By.xpath("//*[@href='#!/playlist/"+playlistId+"']"));
         return newPlaylist.getText().equals(name);
+    }
+    public void renamePlaylist(String playlistId, String newName){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        WebElement playlistToRename = driver.findElement(By.xpath("//*[@href='#!/playlist/"+playlistId+"']"));
+        js.executeScript("arguments[0].scrollIntoView();", playlistToRename);
+        Actions actions = new Actions(driver);
+        actions.doubleClick(playlistToRename).perform();
+
+        getEditPlaylistField().sendKeys(Keys.CONTROL+"a");
+        getEditPlaylistField().sendKeys(newName);
+        getEditPlaylistField().sendKeys(Keys.ENTER);
     }
 }
