@@ -1,6 +1,7 @@
 package pageObjectDi;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -68,5 +69,16 @@ public class MainPageDi {
 
 
     }
+    public void renamePlaylist (String playlistId, String newName) throws InterruptedException {
+    JavascriptExecutor js = (JavascriptExecutor) driver;
+    WebElement playlistToRename = driver.findElement(By.xpath("//*[@href='#!/playlist/"+ playlistId +"']"));
+    js.executeScript("arguments[0].scrollIntoView();", playlistToRename);
 
+    Actions actions = new Actions(driver);
+    //actions.doubleClick(playlistToRename).perform();
+
+    Actions actionsRightClick = new Actions(driver);
+    actions.contextClick(playlistToRename).perform();
+
+    }
 }
