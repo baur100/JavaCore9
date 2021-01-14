@@ -2,15 +2,10 @@ package pageObjects;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class LoginPage {
-    private WebDriver driver;
-    private WebDriverWait wait;
-
+public class LoginPage extends BasePage {
     public LoginPage(WebDriver driver) {
-        this.driver = driver;
-        wait = new WebDriverWait(driver,10,100);
+        super(driver);
     }
     private WebElement getEmailField(){
         wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(LoginPageLocators.cssEmailLocator)));
