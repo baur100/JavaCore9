@@ -1,8 +1,9 @@
 package pageObjectTests;
 
 import com.github.javafaker.Faker;
+import enums.BrowserType;
+import helpers.BrowserFabric;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -11,8 +12,9 @@ public class BaseTest {
     protected Faker faker;
     @BeforeMethod
     public void startUp(){
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-        driver = new ChromeDriver();
+        BrowserType browserType = BrowserType.FIREFOX;
+        driver = BrowserFabric.getWebDriver(browserType);
+
         faker = new Faker();
     }
     @AfterMethod

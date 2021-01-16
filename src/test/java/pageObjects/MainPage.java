@@ -10,7 +10,7 @@ public class MainPage extends BasePage {
     }
     private void clickPlusButton(){
         wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".fa-plus-circle")));
-        for (int i=0;i<5;i++){
+        for (int i=0;i<50;i++){
             try{
                 driver.findElement(By.cssSelector(".fa-plus-circle")).click();
                 break;
