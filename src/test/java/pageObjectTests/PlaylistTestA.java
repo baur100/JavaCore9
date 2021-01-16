@@ -6,9 +6,9 @@ import org.testng.annotations.Test;
 import pageObjects.LoginPage;
 import pageObjects.MainPage;
 
-public class PlaylistTest extends BaseTest{
+public class PlaylistTestA extends BaseTest{
     @Test
-    public void playlistTests_createPlaylist_playlistCreated(){
+    public void playlistTests_createPlaylist_playlistCreatedA(){
         String name = faker.funnyName().name();
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
@@ -17,7 +17,7 @@ public class PlaylistTest extends BaseTest{
         Assert.assertTrue(mainPage.checkPlaylistExist(playlistId,name));
     }
     @Test
-    public void playlistTests_renamePlaylist_playlistRenamed(){
+    public void playlistTests_renamePlaylist_playlistRenamedA(){
         String name = TestObjectGenerator.randomString(8);
         String newName = faker.ancient().god();
         LoginPage loginPage = new LoginPage(driver);
@@ -28,7 +28,7 @@ public class PlaylistTest extends BaseTest{
         Assert.assertTrue(mainPage.checkPlaylistExist(playlistId,newName));
     }
     @Test
-    public void playlistTests_createPlaylist_playlistCreated1(){
+    public void playlistTests_createPlaylist_playlistCreated1A(){
         String name = faker.funnyName().name();
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
@@ -37,7 +37,7 @@ public class PlaylistTest extends BaseTest{
         Assert.assertTrue(mainPage.checkPlaylistExist(playlistId,name));
     }
     @Test
-    public void playlistTests_renamePlaylist_playlistRenamed1(){
+    public void playlistTests_renamePlaylist_playlistRenamed1A(){
         String name = TestObjectGenerator.randomString(8);
         String newName = faker.ancient().god();
         LoginPage loginPage = new LoginPage(driver);
@@ -48,7 +48,7 @@ public class PlaylistTest extends BaseTest{
         Assert.assertTrue(mainPage.checkPlaylistExist(playlistId,newName));
     }
     @Test
-    public void playlistTests_createPlaylist_playlistCreated2(){
+    public void playlistTests_createPlaylist_playlistCreated2A(){
         String name = faker.funnyName().name();
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
@@ -57,7 +57,7 @@ public class PlaylistTest extends BaseTest{
         Assert.assertTrue(mainPage.checkPlaylistExist(playlistId,name));
     }
     @Test
-    public void playlistTests_renamePlaylist_playlistRenamed2(){
+    public void playlistTests_renamePlaylist_playlistRenamed2A(){
         String name = TestObjectGenerator.randomString(8);
         String newName = faker.ancient().god();
         LoginPage loginPage = new LoginPage(driver);
