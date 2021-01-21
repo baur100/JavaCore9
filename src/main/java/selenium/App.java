@@ -14,7 +14,7 @@ public class App {
 
         driver.get("https://google.com");
 
-        WebElement searchField = driver.findElement(By.cssSelector("[name='q']"));
+        WebElement searchField = driver.findElement(By.xpath("//*[@type='text']"));
         searchField.sendKeys("Java");
 
         searchField.sendKeys(Keys.ENTER);
