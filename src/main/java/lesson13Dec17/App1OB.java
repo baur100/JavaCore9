@@ -11,7 +11,7 @@ public class App1OB {
 
         ShapeOB[] shape = {crl, shape1, rec1, sqr1, rec2, shape2};
         for (ShapeOB sh : shape) {
-          //  sh.draw();
+            sh.draw();
             System.out.println(sh.getArea());
         }
     }
