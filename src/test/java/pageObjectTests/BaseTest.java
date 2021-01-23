@@ -26,7 +26,7 @@ public class BaseTest {
         username = email;
         this.password = password;
         this.wrongPassword = wrongPassword;
-        BrowserType browserType = BrowserType.EDGE;
+        BrowserType browserType = BrowserType.CHROME;
         driver = BrowserFabric.getWebDriver(browserType);
 
         faker = new Faker();
