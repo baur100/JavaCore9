@@ -20,13 +20,13 @@ public class BaseTest {
     protected String password;
     protected String wrongPassword;
     protected int error_count = 0;
-    @Parameters({"email", "password","wrongPassword"})
+    @Parameters({"email", "password","wrongPassword", "browser"})
     @BeforeMethod
-    public void startUp(String email, String password, String wrongPassword){
+    public void startUp(String email, String password, String wrongPassword, String browser){
         username = email;
         this.password = password;
         this.wrongPassword = wrongPassword;
-        BrowserType browserType = BrowserType.CHROME;
+        BrowserType browserType = browser.equals("CHROME") ? BrowserType.CHROME : BrowserType.FIREFOX;
         driver = BrowserFabric.getWebDriver(browserType);
 
         faker = new Faker();
