@@ -8,6 +8,7 @@ public class Apps {
 //        int b = numbers[8];
 //        throw new NegativeArraySizeException("You did wrong");
         System.out.println("Before try/catch block");
+
         try{
             System.out.println("Before potential blow up");
             int xx = 5/1;
