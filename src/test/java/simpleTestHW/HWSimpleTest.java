@@ -6,20 +6,30 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-import java.awt.*;
 import java.util.List;
-import java.util.TreeMap;
+
 
 public class HWSimpleTest {
-    @Test
-    public void loginTest_correctCredentials_loggedToApp() throws InterruptedException {
+    WebDriver driver;
+    @BeforeMethod
+    public void startUp() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
+        driver = new ChromeDriver();
         driver.get("https://koelapp.testpro.io/");
         Thread.sleep(1000);
-        WebElement emailField= driver.findElement(By.cssSelector("[type='email']"));
+    }
+    @AfterMethod
+    public void tearDown() throws InterruptedException {
+        Thread.sleep(3000);
+        driver.close();
+    }
+    @Test
+    public void loginTest_correctCredentials_loggedToApp() throws InterruptedException {
+
+        WebElement emailField = driver.findElement(By.cssSelector("[type='email']"));
         WebElement passwordField = driver.findElement(By.xpath("//*[@type='password']"));
         WebElement loginButton = driver.findElement(By.cssSelector("button"));
 
@@ -35,17 +45,10 @@ public class HWSimpleTest {
         } catch (NoSuchElementException ignored){}
         Assert.assertTrue(logged);
 
-        Thread.sleep(3000);
-        driver.close();
     }
 
     @Test
     public void loginTest_wrongCredentials_errorFrame() throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://koelapp.testpro.io/");
-
-        Thread.sleep(1000);
 
         WebElement emailField = driver.findElement(By.cssSelector("[type= 'email']"));
         WebElement passwordField = driver.findElement(By.xpath("//*[@type='password']"));
@@ -63,13 +66,11 @@ public class HWSimpleTest {
 //        }catch (NoSuchElementException ignored){}
 //        boolean error = false;
 //        Assert.assertFalse(error);
-//
 
         List<WebElement> homes = driver.findElements(By.cssSelector(".error"));
         Assert.assertEquals(1, homes.size());
 
-        Thread.sleep(2000);
-        driver.close();
+
 
     }
 }
