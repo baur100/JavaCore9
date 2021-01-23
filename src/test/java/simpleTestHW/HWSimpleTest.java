@@ -8,6 +8,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.awt.*;
+import java.util.List;
 import java.util.TreeMap;
 
 public class HWSimpleTest {
@@ -54,17 +56,20 @@ public class HWSimpleTest {
         loginButton.click();
 
         Thread.sleep(1000);
-        boolean logged = false;
-        try{
-            driver.findElement(By.xpath("//*[@class='error']"));
-            logged=true;
-        }catch (NoSuchElementException ignored){}
-        boolean error = false;
-        Assert.assertFalse(error);
+//        boolean logged = false;
+//        try{
+//            driver.findElement(By.xpath("//*[@class='error']"));
+//            logged = true;
+//        }catch (NoSuchElementException ignored){}
+//        boolean error = false;
+//        Assert.assertFalse(error);
+//
+
+        List<WebElement> homes = driver.findElements(By.cssSelector(".error"));
+        Assert.assertEquals(1, homes.size());
 
         Thread.sleep(2000);
         driver.close();
-
 
     }
 }
