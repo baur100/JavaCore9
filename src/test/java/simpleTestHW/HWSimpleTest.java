@@ -1,9 +1,6 @@
 package simpleTestHW;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -70,7 +67,24 @@ public class HWSimpleTest {
         List<WebElement> homes = driver.findElements(By.cssSelector(".error"));
         Assert.assertEquals(1, homes.size());
 
+    }
 
+    @Test
+    public void createPlayList() throws InterruptedException {
+        WebElement emailField = driver.findElement(By.cssSelector("[type='email']"));
+        WebElement passwordField = driver.findElement(By.xpath("//*[@type='password']"));
+        WebElement loginButton = driver.findElement(By.cssSelector("button"));
 
+        emailField.sendKeys("Innamammadova584@gmail.com");
+        passwordField.sendKeys("te$t$tudent");
+        loginButton.click();
+
+        Thread.sleep(1500);
+        WebElement plusButton = driver.findElement(By.xpath("//*[@class='fa fa-plus-circle control create']"));
+        plusButton.click();
+        WebElement emptyField = driver.findElement(By.xpath("//*[@placeholder='↵ to save']"));
+        emptyField.sendKeys("MyPlayList");
+        emptyField.sendKeys(Keys.RETURN);
+      
     }
 }
