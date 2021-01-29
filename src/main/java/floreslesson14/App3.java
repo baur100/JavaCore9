@@ -21,5 +21,6 @@ public class App3 {
         people.add(new Person("George","Miles"));
 
         System.out.println(people);
+
     }
 }
