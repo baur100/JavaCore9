@@ -52,4 +52,7 @@ public class MainPage extends BasePage {
         getEditPlaylistField().sendKeys(newName);
         getEditPlaylistField().sendKeys(Keys.ENTER);
     }
+
+
+
 }
