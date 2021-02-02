@@ -6,6 +6,6 @@ import org.testng.annotations.Test;
 public class NewTest {
     @Test
     public void doNothing_AssertTrue(){
-        Assert.assertEquals(1,1);
+        Assert.assertTrue(true);
     }
 }
