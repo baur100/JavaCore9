@@ -36,6 +36,6 @@ public class BaseTest {
         if(iTestResult.getStatus()==iTestResult.FAILURE){
             ScreenShot.take(driver,iTestResult.getName());
         }
-        driver.close();
+        driver.quit();
     }
 }
