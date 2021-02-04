@@ -2,6 +2,7 @@ package pageObjects;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.annotations.Test;
 
 public class LoginPage extends BasePage {
     public LoginPage(WebDriver driver) {
@@ -35,4 +36,5 @@ public class LoginPage extends BasePage {
 
         return driver.findElements(By.cssSelector(".error")).size()==1;
     }
-}
+    }
+
