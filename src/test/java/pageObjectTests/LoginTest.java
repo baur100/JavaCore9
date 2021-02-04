@@ -10,7 +10,7 @@ public class LoginTest extends BaseTest{
     public void loginTest_CorrectCredentials_successfulLogin(){
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
-        MainPage mainPage = loginPage.login(username, password);
+        MainPage mainPage = loginPage.login(username, password+"nnn");
         Assert.assertTrue(mainPage.isOpen());
     }
     @Test(enabled = false)

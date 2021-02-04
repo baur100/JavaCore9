@@ -1,20 +1,29 @@
 package pageObjects;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class MainPage extends BasePage {
+    private static Logger logger = LogManager.getLogger(MainPage.class);
     public MainPage(WebDriver driver) {
+
         super(driver);
     }
     private void clickPlusButton(){
+        logger.info("Clicking plus button");
         wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".fa-plus-circle")));
+        logger.info("Element is clickable");
+
         for (int i=0;i<50;i++){
             try{
                 driver.findElement(By.cssSelector(".fa-plus-circle")).click();
                 break;
-            } catch (ElementClickInterceptedException ignored){}
+            } catch (ElementClickInterceptedException xx){
+                logger.error("We in catch block we got "+xx.getLocalizedMessage());
+            }
         }
     }
     private WebElement getEditPlaylistField(){
