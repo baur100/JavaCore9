@@ -50,9 +50,12 @@ public class MainPage extends BasePage {
         WebElement newPlaylist = driver.findElement(By.xpath("//*[@href='#!/playlist/"+playlistId+"']"));
         return newPlaylist.getText().equals(name);
     }
-    public void renamePlaylist(String playlistId, String newName){
+    public void renamePlaylist(String playlistId, String newName) {
+
         JavascriptExecutor js = (JavascriptExecutor) driver;
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@href='#!/playlist/"+playlistId+"']")));
         WebElement playlistToRename = driver.findElement(By.xpath("//*[@href='#!/playlist/"+playlistId+"']"));
+
         js.executeScript("arguments[0].scrollIntoView();", playlistToRename);
         Actions actions = new Actions(driver);
         actions.doubleClick(playlistToRename).perform();
