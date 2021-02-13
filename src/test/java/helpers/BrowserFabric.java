@@ -48,7 +48,7 @@ public class BrowserFabric {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("window-size=1400,1000");
-        options.addArguments("--headless");
+//        options.addArguments("--headless");
         return new ChromeDriver(options);
     }
 }
