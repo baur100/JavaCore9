@@ -11,4 +11,11 @@ public class GetPlaylists {
             System.out.println("name = " +pl.getName()+" id= "+pl.getId());
         }
     }
+    @Test
+    public void getAllArtists(){
+        var list = DbAdapter.getAllArtists();
+        for (var artist: list){
+            System.out.println(artist.getName());
+        }
+    }
 }
