@@ -46,4 +46,32 @@ public class SimpleTest {
         Thread.sleep(3000);
         driver.close();
     }
+
+    @Test
+    public void loginTest_IncorrectCredentials_Error() throws InterruptedException {
+        System.setProperty("webdriver.chrome.driver","chromedriver");
+        WebDriver driver  = new ChromeDriver();
+        driver.get("https://koelapp.testpro.io/");
+        Thread.sleep(1000);
+
+        WebElement emailField = driver.findElement(By.cssSelector("[type='email']"));
+        WebElement passwordField = driver.findElement(By.xpath("//*[@type='password']"));
+        WebElement loginButton = driver.findElement(By.cssSelector("button"));
+
+        emailField.sendKeys("koeluser06@testpro.io");
+        passwordField.sendKeys("WrongPassword");
+        loginButton.click();
+
+        Thread.sleep(1000);
+
+        boolean logged = false;
+        try{
+            driver.findElement(By.cssSelector("[class='error']"));
+            logged =true;
+        }catch (NoSuchElementException ignored){}
+        Assert.assertTrue(logged);
+
+        Thread.sleep(2000);
+        driver.close();
+    }
 }
