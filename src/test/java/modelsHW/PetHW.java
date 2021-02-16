@@ -1,13 +1,14 @@
 package modelsHW;
 
-import jdk.jshell.Snippet;
+
+import enums.Status;
 
 public class PetHW {
     private long id;
     private String name;
     private String[]photoUrls;
-    private Snippet.Status status;
-    private CategoryHW categoryHW;
+    private Status status;
+    private CategoryHW category;
     private TagHW[] tags;
 
     public PetHW(String name, String[] photoUrls) {
@@ -19,12 +20,12 @@ public class PetHW {
         return id;
     }
 
-    public Snippet.Status getStatus() {
+    public Status getStatus() {
         return status;
     }
 
     public CategoryHW getCategoryHW() {
-        return categoryHW;
+        return category;
     }
 
     public TagHW[] getTags() {
@@ -43,15 +44,16 @@ public class PetHW {
         this.id = id;
     }
 
-    public void setStatus(Snippet.Status status) {
+    public void setStatus(Status status) {
         this.status = status;
     }
 
     public void setCategoryHW(CategoryHW categoryHW) {
-        this.categoryHW = categoryHW;
+        this.category = categoryHW;
     }
 
     public void setTags(TagHW[] tags) {
         this.tags = tags;
     }
+
 }
