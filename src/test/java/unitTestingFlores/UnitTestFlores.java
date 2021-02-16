@@ -1,4 +1,4 @@
-package unitTesting;
+package unitTestingFlores;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
