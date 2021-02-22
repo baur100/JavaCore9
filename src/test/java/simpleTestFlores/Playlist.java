@@ -23,7 +23,7 @@ public class Playlist {
         driver.close();
     }
     @Test
-    public void createPlaylist() throws InterruptedException {
+    public void playlist_CreateNewPlaylist() throws InterruptedException {
         newPlaylistName = "AAtest1";
         WebElement emailField = driver.findElement(By.cssSelector("[type='email']"));
         WebElement passwordField = driver.findElement(By.xpath("//*[@type='password']"));
@@ -45,7 +45,6 @@ public class Playlist {
 
         driver.navigate().refresh();
         Thread.sleep(1000);
-
 
         boolean created = false;
         try{
