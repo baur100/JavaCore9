@@ -33,10 +33,6 @@ public class PlaylistsTest {
         MainPage mainPage = loginPage.login("koeluser06@testpro.io","te$t$tudent");
         String playlistId = mainPage.createPlaylist(name);
         Assert.assertTrue(mainPage.checkPlaylistExist(playlistId,name));
-//        mainPage.getPlusButton().click();
-//        mainPage.getInputFieldPlaylist().click();
-//        playlistNewName = "AA1";
-//        mainPage.getInputFieldPlaylist().sendKeys(playlistNewName);
     }
     @Test
     public void playlistTests_renamePlaylist_playlistRenamed() throws InterruptedException {
