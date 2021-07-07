@@ -1,5 +1,7 @@
 package models;
 
+import org.testng.annotations.AfterMethod;
+
 public class CreatePlaylistRequest {
     private String name;
     private String[]rules;
@@ -8,3 +10,4 @@ public class CreatePlaylistRequest {
         this.name = name;
     }
 }
+
