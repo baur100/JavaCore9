@@ -10,7 +10,7 @@ public class App {
                 new AnimalFood((new Flavors[]{Flavors.SALMON,Flavors.TUNA}),16));
         System.out.println(catNextDoor.toString());
 
-        Fish iWish = new Fish("Golgen Fish",Color.GOLD,2,
+        Fish iWish = new Fish("Golden Fish",Color.GOLD,2,
                 new AnimalFood((new Flavors[]{Flavors.CHICKEN}),1),"Salty");
         System.out.println(iWish.toString());
 
