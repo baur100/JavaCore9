@@ -16,7 +16,7 @@ public class App2 {
         doctorsG1.add(doctor2);
 
         Map<Integer, String> roomsG1= new HashMap<>();
-        roomsG1.put(101,"Clining service");
+        roomsG1.put(101,"Cleaning service");
         roomsG1.put(103,"Pharmacy");
 
         List<InsurancesCompanies> insurancesG1 = new ArrayList<>();
