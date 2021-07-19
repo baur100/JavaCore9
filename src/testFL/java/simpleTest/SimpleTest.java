@@ -51,4 +51,30 @@ public class SimpleTest {
 
     }
 
+    @Test
+    public void loginTest_wrongCredentials_errorFrame() throws InterruptedException {
+        System.setProperty("webdriver.chrome.driver","chromedriver");
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://bbb.testpro.io/");
+
+        WebElement emailField = driver.findElement(By.cssSelector("[type='email']"));
+        WebElement passwordField = driver.findElement(By.cssSelector("[type='password']"));
+        WebElement submitButton = driver.findElement(By.cssSelector("button"));
+
+        emailField.sendKeys("testrun7809@gmail.com");
+        passwordField.sendKeys("WrongPassword");
+        submitButton.click();
+        Thread.sleep(1500);
+
+        boolean errorFrame=false;
+        try{
+            driver.findElement(By.className("error"));
+            errorFrame = true;
+        } catch (NoSuchElementException ignored){}
+        Assert.assertTrue(errorFrame);
+
+        Thread.sleep(1500);
+        driver.quit();
+    }
+
 }
