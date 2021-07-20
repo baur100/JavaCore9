@@ -6,18 +6,30 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.awt.*;
 import java.util.List;
 
 public class SimpleTest {
+    WebDriver driver;
+    @BeforeMethod
+    public void startUp(){
+        System.setProperty("webdriver.chrome.driver","chromedriver");
+        driver = new ChromeDriver();
+        driver.get("https://bbb.testpro.io/");
+    }
+
+    @AfterMethod
+    public void tearDown() throws InterruptedException {
+        Thread.sleep(1500);
+        driver.quit();
+    }
+
     @Test
     public void loginTest_correctCredentials_loggedToApp() throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver","chromedriver");
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://bbb.testpro.io/");
-
         WebElement emailField = driver.findElement(By.cssSelector("[type='email']"));
         WebElement passwordField = driver.findElement(By.cssSelector("[type='password']"));
         // css selector by tag - button
@@ -43,20 +55,10 @@ public class SimpleTest {
 //        3rd way - will look for all element with this locator, and add them to the List
         List<WebElement> homes = driver.findElements(By.cssSelector(".home"));
         Assert.assertEquals(1,homes.size());
-
-
-
-        Thread.sleep(1000);
-        driver.quit();
-
     }
 
     @Test
     public void loginTest_wrongCredentials_errorFrame() throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver","chromedriver");
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://bbb.testpro.io/");
-
         WebElement emailField = driver.findElement(By.cssSelector("[type='email']"));
         WebElement passwordField = driver.findElement(By.cssSelector("[type='password']"));
         WebElement submitButton = driver.findElement(By.cssSelector("button"));
@@ -72,9 +74,6 @@ public class SimpleTest {
             errorFrame = true;
         } catch (NoSuchElementException ignored){}
         Assert.assertTrue(errorFrame);
-
-        Thread.sleep(1500);
-        driver.quit();
     }
 
 }
