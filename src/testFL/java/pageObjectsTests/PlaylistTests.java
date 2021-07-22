@@ -30,9 +30,11 @@ public class PlaylistTests {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
         MainPage mainPage = loginPage.loginToApp(username, password);
-        mainPage.createPlaylist(playlistName1);
+        String playlistId = mainPage.createPlaylist(playlistName1);
 
+        //not sure->
 
+        System.out.println(playlistId);
 
     }
 }
