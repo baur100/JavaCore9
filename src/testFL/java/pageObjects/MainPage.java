@@ -28,7 +28,7 @@ public class MainPage extends BasePage{
     private WebElement getNewPlaylistItem(){
         return driver.findElement(By.xpath("//*[text()='New Playlist']"));
     }
-    private WebElement getEditPlaylistField(){
+    private WebElement getCreatePlaylistField(){
         return driver.findElement(By.xpath("//*[@class='create']/input"));
     }
 
@@ -36,9 +36,9 @@ public class MainPage extends BasePage{
         String playlistId = "";
         getFafaPlusButton().click();
         getNewPlaylistItem().click();
-        getEditPlaylistField().click();
-        getEditPlaylistField().sendKeys(playlistName);
-        getEditPlaylistField().sendKeys(Keys.ENTER);
+        getCreatePlaylistField().click();
+        getCreatePlaylistField().sendKeys(playlistName);
+        getCreatePlaylistField().sendKeys(Keys.ENTER);
         By successShowBy = By.cssSelector("[class='success show']");
         wait.until(ExpectedConditions.visibilityOfElementLocated(successShowBy));
 
@@ -46,9 +46,11 @@ public class MainPage extends BasePage{
     }
 
     public boolean checkPlaylist(String playlistId, String playlistName) {
-        // Add scrolling page (or it won't work for Firefox)
-        By playlistBy = By.cssSelector("[href='#!/playlist/"+playlistId+"']");
         try {
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            By playlistBy = getPlaylistBy(playlistId);
+            WebElement playlistLocatedByID= driver.findElement(playlistBy);
+            js.executeScript("arguments[0].scrollIntoView();", playlistLocatedByID);
             wait.until(ExpectedConditions.visibilityOfElementLocated(playlistBy ));
             String name = driver.findElement(playlistBy).getText();
             return name.equals(playlistName);
@@ -57,22 +59,33 @@ public class MainPage extends BasePage{
         }
     }
 
+    private By getPlaylistBy(String playlistId){
+        return By.cssSelector("[href='#!/playlist/"+playlistId+"']");
+    }
+
     public void renamePlaylist(String playlistId, String newPlaylistName) {
-        By playlistBy = By.cssSelector("[href='#!/playlist/"+playlistId+"']");
-        WebElement playlistLocatedByID= driver.findElement(playlistBy);
-
         JavascriptExecutor js = (JavascriptExecutor) driver;
+        By playlistBy = getPlaylistBy(playlistId);
+        WebElement playlistLocatedByID= driver.findElement(playlistBy);
         js.executeScript("arguments[0].scrollIntoView();", playlistLocatedByID);
+
         Actions action = new Actions(driver);
-        action.moveToElement(driver.findElement(playlistBy)).doubleClick().build().perform();
+        action.moveToElement(playlistLocatedByID).doubleClick().build().perform();
 
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@href='#!/playlist/"+playlistId+"']"+"/following-sibling::input")));
-        WebElement editPlaylist = driver.findElement(By.xpath("//*[@href='#!/playlist/"+playlistId+"']"+"/following-sibling::input"));
-        editPlaylist.sendKeys(Keys.COMMAND+"A");
+        WebElement editingField= getEditPlaylistField();
+        editingField.sendKeys(Keys.COMMAND+"A");
+        editingField.sendKeys(newPlaylistName);
+        editingField.sendKeys(Keys.ENTER);
 
-        editPlaylist.sendKeys(newPlaylistName);
-        editPlaylist.sendKeys(Keys.ENTER);
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@href='#!/playlist/"+playlistId+"']"+"/following-sibling::input")));
+
         By successShowBy = By.cssSelector("[class='success show']");
         wait.until(ExpectedConditions.visibilityOfElementLocated(successShowBy));
     }
+
+    private WebElement getEditPlaylistField() {
+        By editBy= By.cssSelector("[type='text']");
+        wait.until(ExpectedConditions.elementToBeClickable(editBy));
+        return driver.findElement(editBy);
+   }
 }
