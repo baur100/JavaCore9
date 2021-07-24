@@ -9,21 +9,8 @@ import org.testng.annotations.Test;
 import pageObjects.LoginPage;
 import pageObjects.MainPage;
 
-public class LoginToApp {
-    private WebDriver driver;
-    String username = "testrun7809@gmail.com";
-    String password = "12345";
+public class LoginToApp extends BaseTest{
 
-    @BeforeMethod
-    public void startUp() {
-        System.setProperty("webdriver.chrome.driver", "chromedriver");
-        driver = new ChromeDriver();
-    }
-    @AfterMethod
-    public void tearDown() throws InterruptedException {
-        Thread.sleep(2000);
-        driver.quit();
-    }
     @Test
     public void loginToApp_correctCredentials_successfulLogin(){
         LoginPage loginPage = new LoginPage(driver);
