@@ -1,6 +1,7 @@
 package pageObjects;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class MainPage extends BasePage{
@@ -54,13 +55,24 @@ public class MainPage extends BasePage{
         } catch (TimeoutException xx) {
             return false;
         }
-
     }
 
     public void renamePlaylist(String playlistId, String newPlaylistName) {
-        // Scroll
-        // By.cssSelector("[href='#!/playlist/"+playlistId+"']")
-        // double click or right-click
-        // Cmd+A highlight text
+        By playlistBy = By.cssSelector("[href='#!/playlist/"+playlistId+"']");
+        WebElement playlistLocatedByID= driver.findElement(playlistBy);
+
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView();", playlistLocatedByID);
+        Actions action = new Actions(driver);
+        action.moveToElement(driver.findElement(playlistBy)).doubleClick().build().perform();
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@href='#!/playlist/"+playlistId+"']"+"/following-sibling::input")));
+        WebElement editPlaylist = driver.findElement(By.xpath("//*[@href='#!/playlist/"+playlistId+"']"+"/following-sibling::input"));
+        editPlaylist.sendKeys(Keys.COMMAND+"A");
+
+        editPlaylist.sendKeys(newPlaylistName);
+        editPlaylist.sendKeys(Keys.ENTER);
+        By successShowBy = By.cssSelector("[class='success show']");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(successShowBy));
     }
 }

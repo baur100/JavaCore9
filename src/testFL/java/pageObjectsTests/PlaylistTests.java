@@ -26,7 +26,8 @@ public class PlaylistTests extends BaseTest{
 
         Assert.assertTrue(mainPage.checkPlaylist(playlistId, playlistName));
     }
-    public void playlistTests_renameNewPlaylist_playlistRenamed(){
+    @Test
+    public void playlistTests_renameNewPlaylist_playlistRenamed() {
         Faker faker = new Faker();
         String playlistName = faker.funnyName().name();
         System.out.println(playlistName);
@@ -35,6 +36,7 @@ public class PlaylistTests extends BaseTest{
         loginPage.open();
         MainPage mainPage = loginPage.loginToApp(username, password);
         String playlistId = mainPage.createPlaylist(playlistName);
+        System.out.println(playlistId);
 
         String newPlaylistName= faker.artist().name();
         mainPage.renamePlaylist(playlistId, newPlaylistName);
