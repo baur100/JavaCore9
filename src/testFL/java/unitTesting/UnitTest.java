@@ -23,7 +23,7 @@ public class UnitTest {
         Assert.assertEquals(price,500.0);
     }
     @Test
-    public void ticketTests_adult_ticketPriceIsFull(){
+    public void ticketTests_adult_FullPrice(){
         CalculateTicket adult = new CalculateTicket(1000,25);
         double price = adult.getPrice();
         Assert.assertEquals(price,1000.0);

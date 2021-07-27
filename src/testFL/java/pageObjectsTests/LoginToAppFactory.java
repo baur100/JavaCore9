@@ -24,4 +24,46 @@ public class LoginToAppFactory extends BaseTest{
         loginPage.loginToApp(username, password+"Wrong");
         Assert.assertTrue(loginPage.isErrorFrame());
     }
+    @Test
+    public void loginToApp_correctCredentials_successfulLogin_COPY1(){
+        LoginPageFactory loginPage = new LoginPageFactory(driver);
+        loginPage.open();
+        MainPage mainPage = loginPage.loginToApp(username, password);
+        Assert.assertTrue(mainPage.isMain());
+    }
+    @Test
+    public void loginToApp_incorrectCredentials_failedLogin_COPY1(){
+        LoginPageFactory loginPage = new LoginPageFactory(driver);
+        loginPage.open();
+        loginPage.loginToApp(username, password+"Wrong");
+        Assert.assertTrue(loginPage.isErrorFrame());
+    }
+    @Test
+    public void loginToApp_correctCredentials_successfulLogin_COPY2(){
+        LoginPageFactory loginPage = new LoginPageFactory(driver);
+        loginPage.open();
+        MainPage mainPage = loginPage.loginToApp(username, password);
+        Assert.assertTrue(mainPage.isMain());
+    }
+    @Test
+    public void loginToApp_incorrectCredentials_failedLogin_COPY2(){
+        LoginPageFactory loginPage = new LoginPageFactory(driver);
+        loginPage.open();
+        loginPage.loginToApp(username, password+"Wrong");
+        Assert.assertTrue(loginPage.isErrorFrame());
+    }
+    @Test
+    public void loginToApp_correctCredentials_successfulLogin_COPY3(){
+        LoginPageFactory loginPage = new LoginPageFactory(driver);
+        loginPage.open();
+        MainPage mainPage = loginPage.loginToApp(username, password);
+        Assert.assertTrue(mainPage.isMain());
+    }
+    @Test
+    public void loginToApp_incorrectCredentials_failedLogin_COPY3(){
+        LoginPageFactory loginPage = new LoginPageFactory(driver);
+        loginPage.open();
+        loginPage.loginToApp(username, password+"Wrong");
+        Assert.assertTrue(loginPage.isErrorFrame());
+    }
 }

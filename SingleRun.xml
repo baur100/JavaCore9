@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name ="Master Suit" parallel="classes" thread-count="3">
+    <parameter name="username" value="testrun7809@gmail.com"></parameter>
+    <parameter name="password" value="12345"></parameter>
+    <parameter name="browser" value="firefox"></parameter>
+    <test name="Main tests">
+        <classes>
+            <class name="pageObjectsTests.PlaylistTests">
+                <methods>
+                    <include name="playlistTests_renameNewPlaylist_playlistRenamed"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

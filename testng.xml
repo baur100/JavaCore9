@@ -1,0 +1,46 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name ="Master Suit" parallel="classes" thread-count="3">
+    <parameter name="username" value="testrun7809@gmail.com"></parameter>
+    <parameter name="password" value="12345"></parameter>
+    <parameter name="browser" value="firefox"></parameter>
+    <test name="Main tests">
+        <classes>
+            <class name="pageObjectsTests.LoginToAppFactory">
+                <methods>
+                    <include name="loginToApp_correctCredentials_successfulLogin"/>
+                    <include name="loginToApp_incorrectCredentials_failedLogin"/>
+                    <include name="loginToApp_correctCredentials_successfulLogin_COPY1"/>
+                    <include name="loginToApp_incorrectCredentials_failedLogin_COPY1"/>
+                    <include name="loginToApp_correctCredentials_successfulLogin_COPY2"/>
+                    <include name="loginToApp_incorrectCredentials_failedLogin_COPY2"/>
+                    <include name="loginToApp_correctCredentials_successfulLogin_COPY3"/>
+                    <exclude name="loginToApp_incorrectCredentials_failedLogin_COPY3"/>
+                </methods>
+            </class>
+            <class name="pageObjectsTests.LoginToApp">
+                <methods>
+                    <include name="loginToApp_correctCredentials_successfulLogin"/>
+                    <include name="loginToApp_incorrectCredentials_failedLogin"/>
+                    <include name="loginToApp_correctCredentials_successfulLogin_COPY1"/>
+                    <include name="loginToApp_incorrectCredentials_failedLogin_COPY1"/>
+                    <include name="loginToApp_correctCredentials_successfulLogin_COPY2"/>
+                    <include name="loginToApp_incorrectCredentials_failedLogin_COPY2"/>
+                    <include name="loginToApp_correctCredentials_successfulLogin_COPY3"/>
+                    <include name="loginToApp_incorrectCredentials_failedLogin_COPY3"/>
+                </methods>
+            </class>
+            <class name="pageObjectsTests.PlaylistTests">
+                <methods>
+                    <include name="playlistTests_createNewPlaylist_playlistCreated"/>
+                    <include name="playlistTests_renameNewPlaylist_playlistRenamed"/>
+                    <include name="playlistTests_createNewPlaylist_playlistCreated_COPY1"/>
+                    <include name="playlistTests_renameNewPlaylist_playlistRenamed_COPY1"/>
+                    <include name="playlistTests_createNewPlaylist_playlistCreated_COPY2"/>
+                    <include name="playlistTests_renameNewPlaylist_playlistRenamed_COPY2"/>
+                    <include name="playlistTests_createNewPlaylist_playlistCreated_COPY3"/>
+                    <include name="playlistTests_renameNewPlaylist_playlistRenamed_COPY3"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
