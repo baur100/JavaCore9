@@ -1,5 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name ="Master Suit" parallel="classes" thread-count="3">
+    <listeners>
+        <listener class-name="listeners.Listeners"/>
+    </listeners>
     <parameter name="username" value="testrun7809@gmail.com"></parameter>
     <parameter name="password" value="12345"></parameter>
     <parameter name="browser" value="firefox"></parameter>

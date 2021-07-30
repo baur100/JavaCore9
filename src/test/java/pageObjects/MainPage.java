@@ -1,11 +1,13 @@
 package pageObjects;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class MainPage extends BasePage{
-
+    private static Logger logger= LogManager.getLogger(MainPage.class);
     public MainPage(WebDriver driver) {
         super(driver);
     }
@@ -33,7 +35,7 @@ public class MainPage extends BasePage{
     }
 
     public String createPlaylist(String playlistName){
-        String playlistId = "";
+        logger.debug("Create Playlist with name -> "+playlistName);
         getFafaPlusButton().click();
         getNewPlaylistItem().click();
         getCreatePlaylistField().click();
@@ -64,6 +66,7 @@ public class MainPage extends BasePage{
     }
 
     public void renamePlaylist(String playlistId, String newPlaylistName) {
+        logger.info("Updating playlist name with id: "+playlistId+". New name: "+newPlaylistName);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         By playlistBy = getPlaylistBy(playlistId);
         WebElement playlistLocatedByID= driver.findElement(playlistBy);
