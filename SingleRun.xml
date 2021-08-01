@@ -5,7 +5,7 @@
     </listeners>
     <parameter name="username" value="testrun7809@gmail.com"></parameter>
     <parameter name="password" value="12345"></parameter>
-    <parameter name="browser" value="chrome"></parameter>
+    <parameter name="browser" value="firefox"></parameter>
     <test name="Main tests">
         <classes>
             <class name="pageObjectsTests.PlaylistTests">

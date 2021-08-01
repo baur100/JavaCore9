@@ -27,7 +27,7 @@ public class PlaylistTests extends BaseTest{
 
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
-        MainPage mainPage = loginPage.loginToApp(username, password+"WRONG!");
+        MainPage mainPage = loginPage.loginToApp(username, password);
         String playlistId = mainPage.createPlaylist(playlistName);
         String newPlaylistName= faker.artist().name();
         mainPage.renamePlaylist(playlistId, newPlaylistName);
