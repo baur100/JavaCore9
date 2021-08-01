@@ -10,7 +10,6 @@
         <classes>
             <class name="pageObjectsTests.PlaylistTests">
                 <methods>
-                    <exclude name="playlistTests_createNewPlaylist_playlistCreated"/>
                     <include name="playlistTests_renameNewPlaylist_playlistRenamed"/>
                 </methods>
             </class>
