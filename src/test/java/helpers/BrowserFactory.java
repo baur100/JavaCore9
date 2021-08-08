@@ -29,7 +29,7 @@ public class BrowserFactory {
         options.addArguments("window-size=1400,1000");
         options.addArguments("--headless");
         WebDriverManager.chromedriver().setup();
-        return new ChromeDriver(options);
+        return new ChromeDriver();
     }
 
     private static WebDriver getFirefoxDriver(){
@@ -40,7 +40,7 @@ public class BrowserFactory {
         options.addArguments("--width=1400");
         options.addArguments("--height=1000");
         WebDriverManager.firefoxdriver().setup();
-        // !!! if we delete option it will run with Browser !!!
+        // !!!  if we delete option it will run with Browser !!!
         return new FirefoxDriver(options);
     }
 

@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "1775df27-1e9f-42ef-bb0e-5e6d50c1ffb3",
+		"name": "Irina FL August",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login with correct credentials",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Assert status code',()=>{",
+							"    pm.response.to.have.status(200)",
+							"});",
+							"",
+							"const respBody = pm.response.json();",
+							"pm.test('Assert contains Token', ()=>{",
+							"    pm.expect(respBody).to.have.keys('token')",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"testrun7809@gmail.com\",\n    \"password\": \"12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}api/me",
+					"host": [
+						"{{baseURL}}api"
+					],
+					"path": [
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Assert Status code',()=>{",
+							"    pm.response.to.have.status(200)",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// I use just \"Bearer Token\" in \"Autorization\" tab, so I am not sure when we need this.",
+							"// But if for some reason I need - this script will pull variable \"token\" from enviroment and add Bearer in front, so we can use it for autorization.",
+							"",
+							"var Header = require('postman-collection').Header",
+							"pm.request.headers.add(new Header(\"Autorization: Bearer \"+ pm.environment.get('token')))"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}api/data",
+					"host": [
+						"{{baseURL}}api"
+					],
+					"path": [
+						"data"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
