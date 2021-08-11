@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="67.278" tests="25" errors="0" skipped="2" failures="0">
+  <properties>
+    <property name="java.specification.version" value="15"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/irinaflores/IdeaProjects/JavaCore9/target/test-classes:/Users/irinaflores/IdeaProjects/JavaCore9/target/classes:/Users/irinaflores/.m2/repository/org/seleniumhq/selenium/selenium-java/3.141.59/selenium-java-3.141.59.jar:/Users/irinaflores/.m2/repository/org/seleniumhq/selenium/selenium-api/3.141.59/selenium-api-3.141.59.jar:/Users/irinaflores/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/3.141.59/selenium-chrome-driver-3.141.59.jar:/Users/irinaflores/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/3.141.59/selenium-edge-driver-3.141.59.jar:/Users/irinaflores/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/3.141.59/selenium-firefox-driver-3.141.59.jar:/Users/irinaflores/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/3.141.59/selenium-ie-driver-3.141.59.jar:/Users/irinaflores/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/3.141.59/selenium-opera-driver-3.141.59.jar:/Users/irinaflores/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/3.141.59/selenium-remote-driver-3.141.59.jar:/Users/irinaflores/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/3.141.59/selenium-safari-driver-3.141.59.jar:/Users/irinaflores/.m2/repository/org/seleniumhq/selenium/selenium-support/3.141.59/selenium-support-3.141.59.jar:/Users/irinaflores/.m2/repository/net/bytebuddy/byte-buddy/1.8.15/byte-buddy-1.8.15.jar:/Users/irinaflores/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/irinaflores/.m2/repository/com/google/guava/guava/25.0-jre/guava-25.0-jre.jar:/Users/irinaflores/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/Users/irinaflores/.m2/repository/org/checkerframework/checker-compat-qual/2.0.0/checker-compat-qual-2.0.0.jar:/Users/irinaflores/.m2/repository/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3.jar:/Users/irinaflores/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/Users/irinaflores/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar:/Users/irinaflores/.m2/repository/com/squareup/okhttp3/okhttp/3.11.0/okhttp-3.11.0.jar:/Users/irinaflores/.m2/repository/com/squareup/okio/okio/1.14.0/okio-1.14.0.jar:/Users/irinaflores/.m2/repository/org/testng/testng/6.14.3/testng-6.14.3.jar:/Users/irinaflores/.m2/repository/com/beust/jcommander/1.72/jcommander-1.72.jar:/Users/irinaflores/.m2/repository/org/apache-extras/beanshell/bsh/2.0b6/bsh-2.0b6.jar:/Users/irinaflores/.m2/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar:/Users/irinaflores/.m2/repository/com/github/javafaker/javafaker/1.0.2/javafaker-1.0.2.jar:/Users/irinaflores/.m2/repository/org/yaml/snakeyaml/1.23/snakeyaml-1.23-android.jar:/Users/irinaflores/.m2/repository/com/github/mifmif/generex/1.0.2/generex-1.0.2.jar:/Users/irinaflores/.m2/repository/dk/brics/automaton/automaton/1.11-8/automaton-1.11-8.jar:/Users/irinaflores/.m2/repository/io/github/bonigarcia/webdrivermanager/4.4.3/webdrivermanager-4.4.3.jar:/Users/irinaflores/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar:/Users/irinaflores/.m2/repository/com/google/code/gson/gson/2.8.6/gson-2.8.6.jar:/Users/irinaflores/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.0.3/httpclient5-5.0.3.jar:/Users/irinaflores/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.0.2/httpcore5-5.0.2.jar:/Users/irinaflores/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.0.2/httpcore5-h2-5.0.2.jar:/Users/irinaflores/.m2/repository/commons-codec/commons-codec/1.13/commons-codec-1.13.jar:/Users/irinaflores/.m2/repository/org/rauschig/jarchivelib/1.1.0/jarchivelib-1.1.0.jar:/Users/irinaflores/.m2/repository/org/apache/commons/commons-compress/1.20/commons-compress-1.20.jar:/Users/irinaflores/.m2/repository/org/jsoup/jsoup/1.13.1/jsoup-1.13.1.jar:/Users/irinaflores/.m2/repository/org/apache/logging/log4j/log4j-api/2.13.3/log4j-api-2.13.3.jar:/Users/irinaflores/.m2/repository/org/apache/logging/log4j/log4j-core/2.13.3/log4j-core-2.13.3.jar:/Users/irinaflores/.m2/repository/commons-io/commons-io/2.8.0/commons-io-2.8.0.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="15"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-15.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/irinaflores/IdeaProjects/JavaCore9/target/surefire/surefirebooter4960279331639135837.jar /Users/irinaflores/IdeaProjects/JavaCore9/target/surefire 2021-08-01T01-28-24_500-jvmRun1 surefire5357035652130988318tmp surefire_09197561195710944383tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/irinaflores/IdeaProjects/JavaCore9/target/test-classes:/Users/irinaflores/IdeaProjects/JavaCore9/target/classes:/Users/irinaflores/.m2/repository/org/seleniumhq/selenium/selenium-java/3.141.59/selenium-java-3.141.59.jar:/Users/irinaflores/.m2/repository/org/seleniumhq/selenium/selenium-api/3.141.59/selenium-api-3.141.59.jar:/Users/irinaflores/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/3.141.59/selenium-chrome-driver-3.141.59.jar:/Users/irinaflores/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/3.141.59/selenium-edge-driver-3.141.59.jar:/Users/irinaflores/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/3.141.59/selenium-firefox-driver-3.141.59.jar:/Users/irinaflores/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/3.141.59/selenium-ie-driver-3.141.59.jar:/Users/irinaflores/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/3.141.59/selenium-opera-driver-3.141.59.jar:/Users/irinaflores/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/3.141.59/selenium-remote-driver-3.141.59.jar:/Users/irinaflores/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/3.141.59/selenium-safari-driver-3.141.59.jar:/Users/irinaflores/.m2/repository/org/seleniumhq/selenium/selenium-support/3.141.59/selenium-support-3.141.59.jar:/Users/irinaflores/.m2/repository/net/bytebuddy/byte-buddy/1.8.15/byte-buddy-1.8.15.jar:/Users/irinaflores/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/irinaflores/.m2/repository/com/google/guava/guava/25.0-jre/guava-25.0-jre.jar:/Users/irinaflores/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/Users/irinaflores/.m2/repository/org/checkerframework/checker-compat-qual/2.0.0/checker-compat-qual-2.0.0.jar:/Users/irinaflores/.m2/repository/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3.jar:/Users/irinaflores/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/Users/irinaflores/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar:/Users/irinaflores/.m2/repository/com/squareup/okhttp3/okhttp/3.11.0/okhttp-3.11.0.jar:/Users/irinaflores/.m2/repository/com/squareup/okio/okio/1.14.0/okio-1.14.0.jar:/Users/irinaflores/.m2/repository/org/testng/testng/6.14.3/testng-6.14.3.jar:/Users/irinaflores/.m2/repository/com/beust/jcommander/1.72/jcommander-1.72.jar:/Users/irinaflores/.m2/repository/org/apache-extras/beanshell/bsh/2.0b6/bsh-2.0b6.jar:/Users/irinaflores/.m2/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar:/Users/irinaflores/.m2/repository/com/github/javafaker/javafaker/1.0.2/javafaker-1.0.2.jar:/Users/irinaflores/.m2/repository/org/yaml/snakeyaml/1.23/snakeyaml-1.23-android.jar:/Users/irinaflores/.m2/repository/com/github/mifmif/generex/1.0.2/generex-1.0.2.jar:/Users/irinaflores/.m2/repository/dk/brics/automaton/automaton/1.11-8/automaton-1.11-8.jar:/Users/irinaflores/.m2/repository/io/github/bonigarcia/webdrivermanager/4.4.3/webdrivermanager-4.4.3.jar:/Users/irinaflores/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar:/Users/irinaflores/.m2/repository/com/google/code/gson/gson/2.8.6/gson-2.8.6.jar:/Users/irinaflores/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.0.3/httpclient5-5.0.3.jar:/Users/irinaflores/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.0.2/httpcore5-5.0.2.jar:/Users/irinaflores/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.0.2/httpcore5-h2-5.0.2.jar:/Users/irinaflores/.m2/repository/commons-codec/commons-codec/1.13/commons-codec-1.13.jar:/Users/irinaflores/.m2/repository/org/rauschig/jarchivelib/1.1.0/jarchivelib-1.1.0.jar:/Users/irinaflores/.m2/repository/org/apache/commons/commons-compress/1.20/commons-compress-1.20.jar:/Users/irinaflores/.m2/repository/org/jsoup/jsoup/1.13.1/jsoup-1.13.1.jar:/Users/irinaflores/.m2/repository/org/apache/logging/log4j/log4j-api/2.13.3/log4j-api-2.13.3.jar:/Users/irinaflores/.m2/repository/org/apache/logging/log4j/log4j-core/2.13.3/log4j-core-2.13.3.jar:/Users/irinaflores/.m2/repository/commons-io/commons-io/2.8.0/commons-io-2.8.0.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/irinaflores"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2020-09-15"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-15.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/irinaflores/IdeaProjects/JavaCore9"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="surefire.real.class.path" value="/Users/irinaflores/IdeaProjects/JavaCore9/target/surefire/surefirebooter4960279331639135837.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="15+36-1562"/>
+    <property name="user.name" value="irinaflores"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="10.13.6"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="browser" value="Chrome"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="/Users/irinaflores/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/var/folders/qc/vwh_gm7d6gzgfm3386bs20yw0000gp/T/"/>
+    <property name="java.version" value="15"/>
+    <property name="user.dir" value="/Users/irinaflores/IdeaProjects/JavaCore9"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.library.path" value="/Users/irinaflores/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="15+36-1562"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="59.0"/>
+  </properties>
+  <testcase name="flakyTest" classname="pageObjectsTests.LoginToApp" time="0">
+    <skipped message="expected [true] but found [false]"/>
+    <system-out><![CDATA[2021-08-01 01:28:25,581 main DEBUG Apache Log4j Core 2.13.3 initializing configuration XmlConfiguration[location=/Users/irinaflores/IdeaProjects/JavaCore9/target/test-classes/log4j2.xml]
+2021-08-01 01:28:25,590 main DEBUG Installed 1 script engine
+2021-08-01 01:28:25,648 main DEBUG BeanShell Engine version: 1.0, language: BeanShell, threading: MULTITHREADED, compile: true, names: [beanshell, bsh, java], factory class: bsh.engine.BshScriptEngineFactory
+2021-08-01 01:28:25,648 main DEBUG PluginManager 'Core' found 122 plugins
+2021-08-01 01:28:25,649 main DEBUG PluginManager 'Level' found 0 plugins
+2021-08-01 01:28:25,654 main DEBUG PluginManager 'Lookup' found 16 plugins
+2021-08-01 01:28:25,658 main DEBUG Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
+2021-08-01 01:28:25,671 main DEBUG PluginManager 'TypeConverter' found 26 plugins
+2021-08-01 01:28:25,685 main DEBUG PatternLayout$Builder(pattern="%d %p %c{1.} [%t] %m%n", PatternSelector=null, Configuration(/Users/irinaflores/IdeaProjects/JavaCore9/target/test-classes/log4j2.xml), Replace=null, charset="null", alwaysWriteExceptions="null", disableAnsi="null", noConsoleNoAnsi="null", header="null", footer="null")
+2021-08-01 01:28:25,686 main DEBUG PluginManager 'Converter' found 44 plugins
+2021-08-01 01:28:25,710 main DEBUG Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.FileAppender].
+2021-08-01 01:28:25,728 main DEBUG FileAppender$Builder(fileName="logs/app.log", append="null", locking="null", advertise="null", advertiseUri="null", createOnDemand="null", filePermissions="null", fileOwner="null", fileGroup="null", bufferedIo="null", bufferSize="null", immediateFlush="null", ignoreExceptions="null", PatternLayout(%d %p %c{1.} [%t] %m%n), name="LogToFile", Configuration(/Users/irinaflores/IdeaProjects/JavaCore9/target/test-classes/log4j2.xml), Filter=null, ={})
+2021-08-01 01:28:25,732 main DEBUG Starting FileManager logs/app.log
+2021-08-01 01:28:25,733 main DEBUG Building Plugin[name=appenders, class=org.apache.logging.log4j.core.config.AppendersPlugin].
+2021-08-01 01:28:25,738 main DEBUG createAppenders(={LogToFile})
+2021-08-01 01:28:25,739 main DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
+2021-08-01 01:28:25,751 main DEBUG createAppenderRef(ref="LogToFile", level="null", Filter=null)
+2021-08-01 01:28:25,752 main DEBUG Building Plugin[name=logger, class=org.apache.logging.log4j.core.config.LoggerConfig].
+2021-08-01 01:28:25,757 main DEBUG createLogger(additivity="false", level="DEBUG", name="io.testpro", includeLocation="null", ={LogToFile}, ={}, Configuration(/Users/irinaflores/IdeaProjects/JavaCore9/target/test-classes/log4j2.xml), Filter=null)
+2021-08-01 01:28:25,766 main DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
+2021-08-01 01:28:25,768 main DEBUG createAppenderRef(ref="LogToFile", level="null", Filter=null)
+2021-08-01 01:28:25,769 main DEBUG Building Plugin[name=root, class=org.apache.logging.log4j.core.config.LoggerConfig$RootLogger].
+2021-08-01 01:28:25,773 main DEBUG createLogger(additivity="null", level="TRACE", includeLocation="null", ={LogToFile}, ={}, Configuration(/Users/irinaflores/IdeaProjects/JavaCore9/target/test-classes/log4j2.xml), Filter=null)
+2021-08-01 01:28:25,780 main DEBUG Building Plugin[name=loggers, class=org.apache.logging.log4j.core.config.LoggersPlugin].
+2021-08-01 01:28:25,783 main DEBUG createLoggers(={io.testpro, root})
+2021-08-01 01:28:25,786 main DEBUG Configuration XmlConfiguration[location=/Users/irinaflores/IdeaProjects/JavaCore9/target/test-classes/log4j2.xml] initialized
+2021-08-01 01:28:25,787 main DEBUG Starting configuration XmlConfiguration[location=/Users/irinaflores/IdeaProjects/JavaCore9/target/test-classes/log4j2.xml]
+2021-08-01 01:28:25,788 main DEBUG Started configuration XmlConfiguration[location=/Users/irinaflores/IdeaProjects/JavaCore9/target/test-classes/log4j2.xml] OK.
+2021-08-01 01:28:25,790 main DEBUG Shutting down OutputStreamManager SYSTEM_OUT.false.false-1
+2021-08-01 01:28:25,791 main DEBUG OutputStream closed
+2021-08-01 01:28:25,791 main DEBUG Shut down OutputStreamManager SYSTEM_OUT.false.false-1, all resources released: true
+2021-08-01 01:28:25,792 main DEBUG Appender DefaultConsole-1 stopped with status true
+2021-08-01 01:28:25,792 main DEBUG Stopped org.apache.logging.log4j.core.config.DefaultConfiguration@971d0d8 OK
+2021-08-01 01:28:25,932 main DEBUG Registering MBean org.apache.logging.log4j2:type=55054057
+2021-08-01 01:28:25,935 main DEBUG Registering MBean org.apache.logging.log4j2:type=55054057,component=StatusLogger
+2021-08-01 01:28:25,938 main DEBUG Registering MBean org.apache.logging.log4j2:type=55054057,component=ContextSelector
+2021-08-01 01:28:25,941 main DEBUG Registering MBean org.apache.logging.log4j2:type=55054057,component=Loggers,name=
+2021-08-01 01:28:25,944 main DEBUG Registering MBean org.apache.logging.log4j2:type=55054057,component=Loggers,name=io.testpro
+2021-08-01 01:28:25,950 main DEBUG Registering MBean org.apache.logging.log4j2:type=55054057,component=Appenders,name=LogToFile
+2021-08-01 01:28:25,954 main DEBUG org.apache.logging.log4j.core.util.SystemClock supports precise timestamps.
+2021-08-01 01:28:25,957 main DEBUG Reconfiguration complete for context[name=55054057] at URI /Users/irinaflores/IdeaProjects/JavaCore9/target/test-classes/log4j2.xml (org.apache.logging.log4j.core.LoggerContext@22f59fa) with optional ClassLoader: null
+2021-08-01 01:28:25,958 main DEBUG Shutdown hook enabled. Registering a new one.
+2021-08-01 01:28:25,959 main DEBUG LoggerContext[name=55054057, org.apache.logging.log4j.core.LoggerContext@22f59fa] started OK.
+]]></system-out>
+    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+SSStartttartairitingng ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dng ChromeDriver c92.0.4515. Chr107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 36206
+Only local connections are allowed.
+Please see https:cf//chroomemedriv3cbe7895134-refs/branch-heads/4515@{#163er.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+Driver 92.0.4515.4}) on port 33489
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 31543
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+/security-considerations for suggestions on keeping ChromeDriver safe.
+CChrhomChromeeDriver waromeDs startedD successfully.
+rirviver was sert was started successfullyarted successfully.
+.
+Aug 01, 2021 1:28:28 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Aug 01, 2021 1:28:28 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Aug 01, 2021 1:28:28 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="flakyTest" classname="pageObjectsTests.LoginToApp" time="0">
+    <skipped message="expected [true] but found [false]"/>
+    <system-err><![CDATA[Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 11437
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Aug 01, 2021 1:28:32 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="flakyTest" classname="pageObjectsTests.LoginToApp" time="0"/>
+  <testcase name="loginToApp_correctCredentials_successfulLogin" classname="pageObjectsTests.LoginToAppFactory" time="1.139"/>
+  <testcase name="playlistTests_createNewPlaylist_playlistCreated" classname="pageObjectsTests.PlaylistTests" time="1.91"/>
+  <testcase name="loginToApp_incorrectCredentials_failedLogin" classname="pageObjectsTests.LoginToAppFactory" time="0.35"/>
+  <testcase name="loginToApp_correctCredentials_successfulLogin" classname="pageObjectsTests.LoginToApp" time="3.018"/>
+  <testcase name="playlistTests_renameNewPlaylist_playlistRenamed" classname="pageObjectsTests.PlaylistTests" time="0.854"/>
+  <testcase name="loginToApp_correctCredentials_successfulLogin_COPY1" classname="pageObjectsTests.LoginToAppFactory" time="0.909"/>
+  <testcase name="loginToApp_incorrectCredentials_failedLogin" classname="pageObjectsTests.LoginToApp" time="2.677"/>
+  <testcase name="loginToApp_incorrectCredentials_failedLogin_COPY1" classname="pageObjectsTests.LoginToAppFactory" time="0.689"/>
+  <testcase name="loginToApp_correctCredentials_successfulLogin_COPY1" classname="pageObjectsTests.LoginToApp" time="0.151"/>
+  <testcase name="playlistTests_createNewPlaylist_playlistCreated_COPY1" classname="pageObjectsTests.PlaylistTests" time="0.494"/>
+  <testcase name="loginToApp_correctCredentials_successfulLogin_COPY2" classname="pageObjectsTests.LoginToAppFactory" time="3.54"/>
+  <testcase name="loginToApp_incorrectCredentials_failedLogin_COPY1" classname="pageObjectsTests.LoginToApp" time="2.041"/>
+  <testcase name="loginToApp_incorrectCredentials_failedLogin_COPY2" classname="pageObjectsTests.LoginToAppFactory" time="1.81"/>
+  <testcase name="playlistTests_renameNewPlaylist_playlistRenamed_COPY1" classname="pageObjectsTests.PlaylistTests" time="0.649"/>
+  <testcase name="loginToApp_correctCredentials_successfulLogin_COPY2" classname="pageObjectsTests.LoginToApp" time="0.252"/>
+  <testcase name="loginToApp_correctCredentials_successfulLogin_COPY3" classname="pageObjectsTests.LoginToAppFactory" time="0.761"/>
+  <testcase name="playlistTests_createNewPlaylist_playlistCreated_COPY2" classname="pageObjectsTests.PlaylistTests" time="3.337"/>
+  <testcase name="loginToApp_correctCredentials_successfulLogin_COPY3" classname="pageObjectsTests.LoginToApp" time="3.565"/>
+  <testcase name="loginToApp_incorrectCredentials_failedLogin_COPY3" classname="pageObjectsTests.LoginToApp" time="1.631"/>
+  <testcase name="playlistTests_renameNewPlaylist_playlistRenamed_COPY2" classname="pageObjectsTests.PlaylistTests" time="3.817"/>
+  <testcase name="playlistTests_createNewPlaylist_playlistCreated_COPY3" classname="pageObjectsTests.PlaylistTests" time="2.717"/>
+  <testcase name="playlistTests_renameNewPlaylist_playlistRenamed_COPY3" classname="pageObjectsTests.PlaylistTests" time="3.663"/>
+</testsuite>

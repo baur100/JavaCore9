@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" parallel="classes" name="Failed suite [Master Suit]" guice-stage="DEVELOPMENT" verbose="0">
+  <parameter name="password" value="12345"/>
+  <parameter name="browser" value="chrome"/>
+  <parameter name="username" value="testrun7809@gmail.com"/>
+  <listeners>
+    <listener class-name="listeners.Listeners"/>
+  </listeners>
+  <test thread-count="3" parallel="classes" name="Main tests(failed)" verbose="0">
+    <classes>
+      <class name="pageObjectsTests.LoginToApp">
+        <methods>
+          <include name="tearDown"/>
+          <include name="flakyTest"/>
+          <include name="startUp"/>
+        </methods>
+      </class> <!-- pageObjectsTests.LoginToApp -->
+    </classes>
+  </test> <!-- Main tests(failed) -->
+</suite> <!-- Failed suite [Master Suit] -->

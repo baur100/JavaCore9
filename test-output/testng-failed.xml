@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" parallel="classes" name="Failed suite [Master Suit]" guice-stage="DEVELOPMENT">
+  <parameter name="password" value="12345"/>
+  <parameter name="browser" value="firefox"/>
+  <parameter name="username" value="testrun7809@gmail.com"/>
+  <listeners>
+    <listener class-name="listeners.Listeners"/>
+  </listeners>
+  <test thread-count="3" parallel="classes" name="Main tests(failed)">
+    <classes>
+      <class name="pageObjectsTests.PlaylistTests">
+        <methods>
+          <include name="playlistTests_renameNewPlaylist_playlistRenamed"/>
+          <include name="tearDown"/>
+          <include name="startUp"/>
+        </methods>
+      </class> <!-- pageObjectsTests.PlaylistTests -->
+      <class name="pageObjectsTests.LoginToApp">
+        <methods>
+          <include name="tearDown"/>
+          <include name="flakyTest"/>
+          <include name="startUp"/>
+        </methods>
+      </class> <!-- pageObjectsTests.LoginToApp -->
+    </classes>
+  </test> <!-- Main tests(failed) -->
+</suite> <!-- Failed suite [Master Suit] -->
