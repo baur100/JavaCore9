@@ -8,14 +8,15 @@ import org.testng.ITestResult;
 
 public class Listeners implements ITestListener {
     private static Logger logger = LogManager.getLogger(Listeners.class);
+
     @Override
     public void onTestStart(ITestResult iTestResult) {
-        logger.info(iTestResult.getName()+" Started ==================");
+        logger.info(iTestResult.getName() + " Started ==================");
     }
 
     @Override
     public void onTestSuccess(ITestResult iTestResult) {
-        System.out.println(iTestResult.getName()+" Success!");
+//        System.out.println(iTestResult.getName() + " Success!");
     }
 
     @Override

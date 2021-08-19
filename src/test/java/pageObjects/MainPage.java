@@ -69,6 +69,7 @@ public class MainPage extends BasePage{
         logger.info("Updating playlist name with id: "+playlistId+". New name: "+newPlaylistName);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         By playlistBy = getPlaylistBy(playlistId);
+        wait.until(ExpectedConditions.elementToBeClickable(playlistBy));
         WebElement playlistLocatedByID= driver.findElement(playlistBy);
         js.executeScript("arguments[0].scrollIntoView();", playlistLocatedByID);
 

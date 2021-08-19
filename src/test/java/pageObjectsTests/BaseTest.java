@@ -43,12 +43,11 @@ public class BaseTest {
 //        WebDriverManager.edgedriver().setup();
 //        driver = new EdgeDriver();
     }
-    @AfterMethod
-    public void tearDown(ITestResult iTestResult) throws InterruptedException {
+    @AfterMethod (alwaysRun = true)
+    public void tearDown(ITestResult iTestResult){
         if (iTestResult.getStatus()==iTestResult.FAILURE){
             GetScreenshot.capture(driver,iTestResult.getName());
         }
-        Thread.sleep(2000);
         driver.quit();
     }
 }
